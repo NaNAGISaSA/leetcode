@@ -37,6 +37,3 @@ class Solution2:
         for num in range(len(s), 0, -1):
             result += d2.get(num, '')
         return result
-
-
-print(Solution2().frequencySort('tree'))
