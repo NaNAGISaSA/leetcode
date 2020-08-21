@@ -69,5 +69,3 @@ class Solution3:
                 d[x][j] = d[x - 1][j] + d[x][j - 1]
                 print(d)
         return d[n - 1][m - 1]
-
-Solution3().uniquePaths(7, 3)
