@@ -29,3 +29,28 @@ class Solution:
         if s.startswith('0'):
             return 0
         return Solution.count(s, {s[-1]: 1})
+
+
+"""
+Runtime: 24 ms, faster than 98.62% of Python3 online submissions for Decode Ways.
+Memory Usage: 13.7 MB, less than 91.05% of Python3 online submissions for Decode Ways.
+"""
+
+
+class Solution2:
+    """
+    dp[n]: decoding number of s[:n]
+    """
+    def numDecodings(self, s: str) -> int:
+        length = len(s)
+        dp = [0] * (length + 1)
+        dp[0] = 1
+        dp[1] = 0 if s[0] == '0' else 1
+        for i in range(2, length + 1):
+            str1 = int(s[i - 1: i])
+            str2 = int(s[i - 2: i])
+            if 1 <= str1 <= 9:
+                dp[i] += dp[i - 1]
+            if 10 <= str2 <= 26:
+                dp[i] += dp[i - 2]
+        return dp[length]
