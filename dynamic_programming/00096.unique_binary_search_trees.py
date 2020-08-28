@@ -6,7 +6,9 @@ Memory Usage: 13.8 MB, less than 67.49% of Python3 online submissions for Unique
 
 
 class Solution:
-
+    """
+    count = count + left_cases * right_cases for num in [1, number]
+    """
     @staticmethod
     def count(number_list, d):
         number_list = sorted(number_list)
