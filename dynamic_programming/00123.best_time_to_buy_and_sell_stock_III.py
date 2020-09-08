@@ -56,6 +56,3 @@ class Solution2:
                     diff = max(diff, profile[k - 1][index - 2] - prices[index - 1])
                 profile[k][index] = max(profile[k][index - 1], diff + price)
         return max(profile[1][-1], profile[2][-1])
-
-
-print(Solution2().maxProfit([7]))
