@@ -50,3 +50,31 @@ class Solution:
             if ''.join(reversed(value)) == s:
                 final.append(' '.join(reversed(value)))
         return final
+
+
+"""
+Runtime: 44 ms, faster than 77.00% of Python3 online submissions for Word Break II.
+Memory Usage: 13.9 MB, less than 85.84% of Python3 online submissions for Word Break II.
+"""
+
+
+class Solution2:
+
+    def sub_string_list(self, string, word_dict, map_dict) -> List[str]:
+        if string in map_dict:
+            return map_dict.get(string)
+
+        if not string:
+            return ['']
+
+        final_result = []
+        for word in word_dict:
+            if string.startswith(word):
+                result = self.sub_string_list(string[len(word):], word_dict, map_dict)
+                result = [f'{word} {res}' if res != '' else word for res in result]
+                final_result.extend(result)
+        map_dict[string] = final_result
+        return final_result
+
+    def wordBreak(self, s: str, wordDict: List[str]) -> List[str]:
+        return self.sub_string_list(s, wordDict, {})
