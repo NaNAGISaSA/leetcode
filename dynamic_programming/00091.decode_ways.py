@@ -25,7 +25,7 @@ class Solution:
             d[string] = Solution.count(string[1:], d)
         return d[string]
 
-    def numDecodings(self, s: str) -> int:
+    def num_decodings(self, s: str) -> int:
         if s.startswith('0'):
             return 0
         return Solution.count(s, {s[-1]: 1})
@@ -41,7 +41,7 @@ class Solution2:
     """
     dp[n]: decoding number of s[:n]
     """
-    def numDecodings(self, s: str) -> int:
+    def num_decodings(self, s: str) -> int:
         length = len(s)
         dp = [0] * (length + 1)
         dp[0] = 1

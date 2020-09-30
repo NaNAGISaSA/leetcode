@@ -24,7 +24,7 @@ class Solution:
             else:
                 Solution.assemble_result(dp_dict, key - len(value), current_list_copy, true_result)
 
-    def wordBreak(self, s: str, wordDict: List[str]) -> List[str]:
+    def word_break(self, s: str, wordDict: List[str]) -> List[str]:
         dp_result = [True]
         dp_dict = {}
         length = len(s)
@@ -76,5 +76,5 @@ class Solution2:
         map_dict[string] = final_result
         return final_result
 
-    def wordBreak(self, s: str, wordDict: List[str]) -> List[str]:
+    def word_break(self, s: str, wordDict: List[str]) -> List[str]:
         return self.sub_string_list(s, wordDict, {})

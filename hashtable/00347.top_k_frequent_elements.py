@@ -14,6 +14,3 @@ class Solution:
             d[element] = d.get(element, 0) + 1
         sort_value = sorted(d.values(), reverse=True)[:k]
         return [key for key, value in d.items() if value in sort_value]
-
-
-

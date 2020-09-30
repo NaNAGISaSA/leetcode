@@ -13,7 +13,7 @@ class Solution:
 
     max_price(n, k) = max(max_price(n - 1, k), max_price(i, k - 1) + price(n) - price(i)) for i in range(n)
     """
-    def maxProfit(self, prices: List[int]) -> int:
+    def max_profit(self, prices: List[int]) -> int:
         profile = [[0] * len(prices) for _ in range(3)]
         for k in range(1, 3):
             for index, price in enumerate(prices):
@@ -47,7 +47,7 @@ class Solution2:
     dp[1][2] - prices[3] + prices[5]  (old maxDiff + price[5])
     dp[1][3] - prices[4] + prices[5]  (new maxDiff + price[5])
     """
-    def maxProfit(self, prices: List[int]) -> int:
+    def max_profit(self, prices: List[int]) -> int:
         profile = [[0] * len(prices) for _ in range(3)]
         for k in range(1, 3):
             diff = 0 - prices[0]

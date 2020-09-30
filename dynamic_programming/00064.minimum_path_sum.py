@@ -20,7 +20,7 @@ class Solution:
         path[i][j] = min(Solution.min_path(i - 1, j, grid, path), Solution.min_path(i, j - 1, grid, path)) + grid[i][j]
         return path[i][j]
 
-    def minPathSum(self, grid: List[List[int]]) -> int:
+    def min_path_sum(self, grid: List[List[int]]) -> int:
         i, j = len(grid), len(grid[0])
         path = [[-1] * j for _ in range(i)]
         path[0][0] = grid[0][0]
@@ -39,7 +39,7 @@ Memory Usage: 15.5 MB, less than 23.47% of Python3 online submissions for Minimu
 
 class Solution2:
 
-    def minPathSum(self, grid: List[List[int]]) -> int:
+    def min_path_sum(self, grid: List[List[int]]) -> int:
         i, j = len(grid), len(grid[0])
         for index in range(1, j):
             grid[0][index] = grid[0][index - 1] + grid[0][index]

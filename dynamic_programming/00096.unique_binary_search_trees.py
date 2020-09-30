@@ -21,7 +21,7 @@ class Solution:
         d[length] = count
         return count
 
-    def numTrees(self, n: int) -> int:
+    def num_trees(self, n: int) -> int:
         d = {0: 1, 1: 1, 2: 2, 3: 5}
         for i in range(4, n + 1):
             Solution.count(list(range(1, i + 1)), d)
@@ -46,7 +46,7 @@ class Solution2:
         d[number] = count
         return count
 
-    def numTrees(self, n: int) -> int:
+    def num_trees(self, n: int) -> int:
         d = {0: 1, 1: 1, 2: 2, 3: 5}
         for i in range(4, n + 1):
             Solution2.count(i, d)

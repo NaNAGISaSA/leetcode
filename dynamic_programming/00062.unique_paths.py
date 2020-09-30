@@ -17,7 +17,7 @@ class Solution:
         else:
             return Solution.count(m - 1, n) + Solution.count(m, n - 1)
 
-    def uniquePaths(self, m: int, n: int) -> int:
+    def unique_paths(self, m: int, n: int) -> int:
         return Solution.count(m - 1, n - 1)
 
 
@@ -45,7 +45,7 @@ class Solution2:
             d[(m, n)] = Solution2.count(m - 1, n, d) + Solution2.count(m, n - 1, d)
             return d[(m, n)]
 
-    def uniquePaths(self, m: int, n: int) -> int:
+    def unique_paths(self, m: int, n: int) -> int:
         d = {(0, 0): 1}
         return Solution2.count(m - 1, n - 1, d)
 
@@ -61,7 +61,7 @@ class Solution3:
     forward to backward
     """
 
-    def uniquePaths(self, m: int, n: int) -> int:
+    def unique_paths(self, m: int, n: int) -> int:
         d = [[1] * m]
         d.extend([[1] + [0] * (m - 1) for _ in range(n - 1)])
         for x in range(1, n):

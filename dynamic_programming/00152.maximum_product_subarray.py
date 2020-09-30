@@ -46,7 +46,7 @@ class Solution:
             product_list.append(neg_product)
         return max(product_list)
 
-    def maxProduct(self, nums: List[int]) -> int:
+    def max_product(self, nums: List[int]) -> int:
         max_number = self.find_max_number(nums)
         max_number_reverse = self.find_max_number(reversed(nums))
         return max(max_number, max_number_reverse)
@@ -62,7 +62,7 @@ class Solution2:
     """
     no dp method, find the max number directly
     """
-    def maxProduct(self, nums: List[int]) -> int:
+    def max_product(self, nums: List[int]) -> int:
         import sys
 
         product = 1

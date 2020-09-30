@@ -1,0 +1,27 @@
+[MESSAGES CONTROL]
+
+disable = missing-module-docstring,
+          missing-function-docstring,
+          missing-class-docstring,
+          too-few-public-methods,
+          pointless-string-statement,
+          no-self-use
+
+
+[FORMAT]
+
+max-line-length=120
+
+[BASIC]
+good-names = i,
+             j,
+             k,
+             x,
+             y,
+             m,
+             n,
+             d,
+             s,
+             t,
+             e,
+             v

@@ -21,7 +21,7 @@ class Solution:
         else:
             return Solution.count(s[index + 1:], t[1:]) + Solution.count(s[index + 1:], t)
 
-    def numDistinct(self, s: str, t: str) -> int:
+    def num_distinct(self, s: str, t: str) -> int:
         return Solution.count(s, t)
 
 
@@ -37,7 +37,7 @@ class Solution2:
     dp[i][j] = dp[i - 1][j] + dp[i - 1][j - 1]    s[i] == t[j]
                dp[i - 1][j]   s[i] != t[j]
     """
-    def numDistinct(self, s: str, t: str) -> int:
+    def num_distinct(self, s: str, t: str) -> int:
         length1, length2 = len(s), len(t)
         count_matrix = [[0] * (length2 + 1)for _ in range(length1 + 1)]
         for number in range(0, length1 + 1):

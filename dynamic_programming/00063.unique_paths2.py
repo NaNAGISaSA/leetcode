@@ -12,7 +12,7 @@ class Solution:
     """
     count(m, n) = count(m - 1, n) + count(m, n - 1)
     """
-    def uniquePathsWithObstacles(self, obstacleGrid: List[List[int]]) -> int:
+    def unique_paths_with_obstacles(self, obstacleGrid: List[List[int]]) -> int:  # pylint: disable=invalid-name
         length1, length2 = len(obstacleGrid), len(obstacleGrid[0])
         count_matrix = [[0] * length2 for _ in range(length1)]
         count_matrix[0][0] = 1 if obstacleGrid[0][0] == 0 else 0

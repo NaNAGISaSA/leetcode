@@ -18,7 +18,7 @@ class Solution:
             d[n] = Solution.count(n - 1, d) + Solution.count(n - 2, d)
             return d[n]
 
-    def climbStairs(self, n: int) -> int:
+    def climb_stairs(self, n: int) -> int:
         d = {1: 1, 2: 2}
         return Solution.count(n, d)
 
@@ -31,7 +31,7 @@ Memory Usage: 14 MB, less than 14.65% of Python3 online submissions for Climbing
 
 class Solution2:
 
-    def climbStairs(self, n: int) -> int:
+    def climb_stairs(self, n: int) -> int:
         d = {1: 1, 2: 2}
         for number in range(3, n + 1):
             d[number] = d[number - 1] + d[number - 2]

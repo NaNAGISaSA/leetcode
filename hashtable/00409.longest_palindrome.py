@@ -14,4 +14,3 @@ class Solution:
         for k, v in result.items():
             number += v // 2
         return 2 * number if len(s) == 2 * number else 2 * number + 1
-

@@ -10,7 +10,7 @@ class Solution:
     dp[i][j]   s1[0, i) s2 [0, j)  s3[0, i + j)
     dp[i][j] = (dp[i - 1][j] and s3[i + j - 1] == s1[i - 1]) or (dp[i][j - 1] and s3[i + j - 1] == s2[j - 1])
     """
-    def isInterleave(self, s1: str, s2: str, s3: str) -> bool:
+    def is_interleave(self, s1: str, s2: str, s3: str) -> bool:
         length1, length2 = len(s1), len(s2)
         if length1 == 0 or length2 == 0:
             return s1 == s3 or s2 == s3

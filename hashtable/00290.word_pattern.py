@@ -23,7 +23,5 @@ Memory Usage: 13.9 MB, less than 40.24% of Python3 online submissions for Word P
 class Solution2:
     def wordPattern(self, pattern: str, str: str) -> bool:
         split_list = str.split(' ')
-        return len(pattern) == len(split_list) and \
-               len(set(zip(pattern, split_list))) == len(set(pattern)) == len(set(split_list))
-
-
+        return (len(pattern) == len(split_list)) and \
+               (len(set(zip(pattern, split_list))) == len(set(pattern)) == len(set(split_list)))

@@ -13,7 +13,7 @@ class Solution:
     dp(i, j) = 0   dp(i, j) = 0
                min(dp(i - 1, j), dp(i, j - 1), dp(i - 1, j - 1)) + 1   dp(i, j) = 1
     """
-    def maximalSquare(self, matrix: List[List[str]]) -> int:
+    def maximal_square(self, matrix: List[List[str]]) -> int:
         if len(matrix) == 0:
             return 0
         for i in range(len(matrix)):

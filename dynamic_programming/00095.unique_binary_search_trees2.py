@@ -38,5 +38,5 @@ class Solution:
 
         return result
 
-    def generateTrees(self, n: int) -> List[TreeNode]:
+    def generate_trees(self, n: int) -> List[TreeNode]:
         return [] if n == 0 else Solution.gen_tress(1, n)

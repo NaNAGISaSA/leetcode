@@ -17,10 +17,9 @@ class Solution:
         """
         return input_array[index] + dp[index - 1] if dp[index - 1] > 0 else input_array[index]
 
-    def maxSubArray(self, nums: List[int]) -> int:
+    def max_sub_array(self, nums: List[int]) -> int:
         length = len(nums)
         dp = [nums[0]]
         for index in range(1, length):
             dp.append(Solution.dp_fun(nums, index, dp))
         return max(dp)
-

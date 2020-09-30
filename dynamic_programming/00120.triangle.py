@@ -13,9 +13,9 @@ class Solution:
 
     min_sum[i][j] += min(min_sum[i - 1][j], min_sum[i - 1][j - 1])
     """
-    def minimumTotal(self, triangle: List[List[int]]) -> int:
+    def minimum_total(self, triangle: List[List[int]]) -> int:
         number_list = triangle[:]
-        for index, content in enumerate(triangle[1:], 1):
+        for index, _ in enumerate(triangle[1:], 1):
             number_list[index][0] += number_list[index - 1][0]
             number_list[index][-1] += number_list[index - 1][-1]
         for i in range(2, len(number_list)):
@@ -36,8 +36,8 @@ class Solution2:
 
     min_sum[i][j] += min(min_sum[i - 1][j], min_sum[i - 1][j - 1])
     """
-    def minimumTotal(self, triangle: List[List[int]]) -> int:
-        for index, content in enumerate(triangle[1:], 1):
+    def minimum_total(self, triangle: List[List[int]]) -> int:
+        for index, _ in enumerate(triangle[1:], 1):
             triangle[index][0] += triangle[index - 1][0]
             triangle[index][-1] += triangle[index - 1][-1]
         for i in range(2, len(triangle)):
