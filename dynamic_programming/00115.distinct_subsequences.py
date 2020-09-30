@@ -18,8 +18,7 @@ class Solution:
             return 0
         if index == s.rfind(t[0]):
             return Solution.count(s[index + 1:], t[1:])
-        else:
-            return Solution.count(s[index + 1:], t[1:]) + Solution.count(s[index + 1:], t)
+        return Solution.count(s[index + 1:], t[1:]) + Solution.count(s[index + 1:], t)
 
     def num_distinct(self, s: str, t: str) -> int:
         return Solution.count(s, t)

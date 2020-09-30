@@ -18,7 +18,7 @@ class Solution:
             return 0
         buy, profit = prices[0], 0
         profit_list = [0]
-        for index, price in enumerate(prices[1:]):
+        for _, price in enumerate(prices[1:]):
             if price - buy >= profit:
                 profit = price - buy
                 profit_list.append(profit)
@@ -36,9 +36,9 @@ Memory Usage: 14.9 MB, less than 95.07% of Python3 online submissions for Best T
 class Solution2:
 
     def max_profit(self, prices: List[int]) -> int:
-        import sys
+        import sys  # pylint: disable=import-outside-toplevel
         buy, profit = sys.maxsize, 0
-        for index, sell_price in enumerate(prices):
+        for _, sell_price in enumerate(prices):
             if sell_price - buy >= profit:
                 profit = sell_price - buy
             elif buy > sell_price:

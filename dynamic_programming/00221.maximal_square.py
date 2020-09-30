@@ -16,9 +16,9 @@ class Solution:
     def maximal_square(self, matrix: List[List[str]]) -> int:
         if len(matrix) == 0:
             return 0
-        for i in range(len(matrix)):
+        for i, _ in enumerate(matrix):
             matrix[i][0] = int(matrix[i][0])
-        for i in range(len(matrix[0])):
+        for i, _ in enumerate(matrix[0]):
             matrix[0][i] = int(matrix[0][i])
         max_length = max([*matrix[0], *list(zip(*matrix))[0]])
         for i in range(1, len(matrix)):

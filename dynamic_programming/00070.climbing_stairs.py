@@ -14,9 +14,8 @@ class Solution:
         """
         if n in d:
             return d[n]
-        else:
-            d[n] = Solution.count(n - 1, d) + Solution.count(n - 2, d)
-            return d[n]
+        d[n] = Solution.count(n - 1, d) + Solution.count(n - 2, d)
+        return d[n]
 
     def climb_stairs(self, n: int) -> int:
         d = {1: 1, 2: 2}

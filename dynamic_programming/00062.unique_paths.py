@@ -12,10 +12,9 @@ class Solution:
         """
         if m == 0 and n == 0:
             return 1
-        elif m < 0 or n < 0:
+        if m < 0 or n < 0:
             return 0
-        else:
-            return Solution.count(m - 1, n) + Solution.count(m, n - 1)
+        return Solution.count(m - 1, n) + Solution.count(m, n - 1)
 
     def unique_paths(self, m: int, n: int) -> int:
         return Solution.count(m - 1, n - 1)
@@ -39,11 +38,10 @@ class Solution2:
         """
         if (m, n) in d:
             return d.get((m, n))
-        elif m < 0 or n < 0:
+        if m < 0 or n < 0:
             return 0
-        else:
-            d[(m, n)] = Solution2.count(m - 1, n, d) + Solution2.count(m, n - 1, d)
-            return d[(m, n)]
+        d[(m, n)] = Solution2.count(m - 1, n, d) + Solution2.count(m, n - 1, d)
+        return d[(m, n)]
 
     def unique_paths(self, m: int, n: int) -> int:
         d = {(0, 0): 1}

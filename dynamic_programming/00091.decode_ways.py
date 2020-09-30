@@ -15,11 +15,11 @@ class Solution:
     def count(string, d):
         if string == '':
             return 1
-        elif string[0] == '0':
+        if string[0] == '0':
             return 0
-        elif string in d:
+        if string in d:
             return d[string]
-        elif string[0] == '1' or string[:2] in ('20', '21', '22', '23', '24', '25', '26'):
+        if string[0] == '1' or string[:2] in ('20', '21', '22', '23', '24', '25', '26'):
             d[string] = Solution.count(string[1:], d) + Solution.count(string[2:], d)
         else:
             d[string] = Solution.count(string[1:], d)

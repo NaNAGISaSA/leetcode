@@ -12,7 +12,7 @@ class Solution:
     """
     dp[i] = dp[i] || (dp[i - len(word)] && s[i - len(word) : i]) for word in word_dict
     """
-    def word_break(self, s: str, wordDict: List[str]) -> bool:
+    def word_break(self, s: str, wordDict: List[str]) -> bool:  # pylint: disable=invalid-name
         if len(wordDict) == 0:
             return False
         min_length = min([len(x) for x in wordDict])

@@ -14,10 +14,10 @@ class Solution:
     Ideally, it should cover all cases, and should not reverse the array.
     But finally, this case can not cover: [-1. -2, -3], so reverse the array and find again.
     """
-    def find_max_number(self, array):
+    def find_max_number(self, array):  # pylint: disable=too-many-branches
         max_product, neg_product = 1, 1  # max_product always positive
         product_list = []
-        for index, num in enumerate(array):
+        for _, num in enumerate(array):
             if num < 0:
                 neg_product *= num
                 if neg_product == 1:
@@ -63,11 +63,11 @@ class Solution2:
     no dp method, find the max number directly
     """
     def max_product(self, nums: List[int]) -> int:
-        import sys
+        import sys  # pylint: disable=import-outside-toplevel
 
         product = 1
         max_value = -sys.maxsize - 1
-        for index, number in enumerate(nums):
+        for _, number in enumerate(nums):
             product *= number
             if product > max_value:
                 max_value = product
@@ -75,7 +75,7 @@ class Solution2:
                 product = 1
 
         product = 1
-        for index, number in enumerate(reversed(nums)):
+        for _, number in enumerate(reversed(nums)):
             product *= number
             if product > max_value:
                 max_value = product

@@ -10,10 +10,10 @@ class Solution:
     dp[i][j]   s1[0, i) s2 [0, j)  s3[0, i + j)
     dp[i][j] = (dp[i - 1][j] and s3[i + j - 1] == s1[i - 1]) or (dp[i][j - 1] and s3[i + j - 1] == s2[j - 1])
     """
-    def is_interleave(self, s1: str, s2: str, s3: str) -> bool:
+    def is_interleave(self, s1: str, s2: str, s3: str) -> bool:  # pylint: disable=invalid-name
         length1, length2 = len(s1), len(s2)
         if length1 == 0 or length2 == 0:
-            return s1 == s3 or s2 == s3
+            return s3 in (s1, s2)
         if length1 + length2 != len(s3):
             return False
         dp_matrix = [[False] * (length2 + 1) for _ in range(length1 + 1)]
