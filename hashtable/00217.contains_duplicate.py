@@ -8,7 +8,7 @@ Memory Usage: 19.2 MB, less than 56.81% of Python3 online submissions for Contai
 
 
 class Solution:
-    def containsDuplicate(self, nums: List[int]) -> bool:
+    def contains_duplicate(self, nums: List[int]) -> bool:
         return len(nums) != len(set(nums))
 
 
@@ -19,7 +19,7 @@ Memory Usage: 19.3 MB, less than 39.94% of Python3 online submissions for Contai
 
 
 class Solution2:
-    def containsDuplicate(self, nums: List[int]) -> bool:
+    def contains_duplicate(self, nums: List[int]) -> bool:
         s = set()
         for number in nums:
             if number not in s:

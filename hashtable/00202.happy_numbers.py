@@ -6,17 +6,16 @@ Memory Usage: 13.9 MB, less than 32.86% of Python3 online submissions for Happy 
 
 
 class Solution:
-    def isHappy(self, n: int) -> bool:
+    def is_happy(self, n: int) -> bool:
         set_number = {''.join(sorted(str(n)))}
         while True:
             sum_number = sum([int(num) ** 2 for num in str(n)])
             if sum_number == 1:
                 return True
-            elif ''.join(sorted(str(sum_number))) in set_number:
+            if ''.join(sorted(str(sum_number))) in set_number:
                 return False
-            else:
-                set_number.add(''.join(sorted(str(sum_number))))
-                n = sum_number
+            set_number.add(''.join(sorted(str(sum_number))))
+            n = sum_number
 
 
 """
@@ -26,7 +25,7 @@ Memory Usage: 14 MB, less than 12.89% of Python3 online submissions for Happy Nu
 
 
 class Solution2:
-    def isHappy(self, n: int) -> bool:
+    def is_happy(self, n: int) -> bool:
         set_number = {''.join(sorted(str(n)))}
         while True:
             sum_number = sum([int(num) ** 2 for num in str(n)])
@@ -35,9 +34,8 @@ class Solution2:
             str_number = ''.join(sorted(str(sum_number)))
             if str_number in set_number:
                 return False
-            else:
-                set_number.add(str_number)
-                n = sum_number
+            set_number.add(str_number)
+            n = sum_number
 
 
 """
@@ -47,12 +45,11 @@ Memory Usage: 13.6 MB, less than 94.19% of Python3 online submissions for Happy 
 
 
 class Solution3:
-    def isHappy(self, n: int) -> bool:
+    def is_happy(self, n: int) -> bool:
         set_number = {n}
         while n != 1:
             n = sum([int(num) ** 2 for num in str(n)])
             if n in set_number:
                 return False
-            else:
-                set_number.add(n)
+            set_number.add(n)
         return True

@@ -7,7 +7,7 @@ Memory Usage: 13.9 MB, less than 39.94% of Python3 online submissions for Valid 
 
 
 class Solution:
-    def isValidSudoku(self, board: List[List[str]]) -> bool:
+    def is_valid_sudoku(self, board: List[List[str]]) -> bool:
 
         rows = [set() for _ in range(9)]
         columns = [set() for _ in range(9)]

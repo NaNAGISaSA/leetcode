@@ -9,7 +9,7 @@ Memory Usage: 14.3 MB, less than 36.36% of Python3 online submissions for Number
 
 
 class Solution:
-    def numberOfBoomerangs(self, points: List[List[int]]) -> int:
+    def number_of_boomerangs(self, points: List[List[int]]) -> int:
         d = collections.defaultdict(int)
         result = 0
         for index, point_one in enumerate(points):

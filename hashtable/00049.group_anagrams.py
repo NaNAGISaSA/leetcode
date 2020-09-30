@@ -7,7 +7,7 @@ Memory Usage: 17.1 MB, less than 56.82% of Python3 online submissions for Group 
 
 
 class Solution:
-    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+    def group_anagrams(self, strs: List[str]) -> List[List[str]]:
         sort_dict = {}
         sort_set = set()
         for string in strs:
@@ -27,7 +27,7 @@ Memory Usage: 16.5 MB, less than 89.37% of Python3 online submissions for Group 
 
 
 class Solution2:
-    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+    def group_anagrams(self, strs: List[str]) -> List[List[str]]:
         sort_dict = {}
         for string in strs:
             sorted_string = ''.join(sorted(string))

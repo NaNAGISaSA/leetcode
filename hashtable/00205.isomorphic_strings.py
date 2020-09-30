@@ -6,7 +6,7 @@ Memory Usage: 14.2 MB, less than 20.47% of Python3 online submissions for Isomor
 
 
 class Solution:
-    def isIsomorphic(self, s: str, t: str) -> bool:
+    def is_isomorphic(self, s: str, t: str) -> bool:
         map_dict = {}
         map_dict2 = {}
         for char_s, char_t in zip(s, t):
@@ -29,5 +29,5 @@ Memory Usage: 14.1 MB, less than 34.51% of Python3 online submissions for Isomor
 
 
 class Solution2:
-    def isIsomorphic(self, s: str, t: str) -> bool:
+    def is_isomorphic(self, s: str, t: str) -> bool:
         return len(set(zip(s, t))) == len(set(s)) and len(set(zip(t, s))) == len(set(t))

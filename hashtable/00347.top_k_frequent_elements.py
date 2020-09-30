@@ -8,7 +8,7 @@ Memory Usage: 18.3 MB, less than 45.75% of Python3 online submissions for Top K 
 
 
 class Solution:
-    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+    def top_k_frequent(self, nums: List[int], k: int) -> List[int]:
         d = {}
         for _, element in enumerate(nums):
             d[element] = d.get(element, 0) + 1

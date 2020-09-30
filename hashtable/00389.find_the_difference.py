@@ -8,7 +8,7 @@ Memory Usage: 13.8 MB, less than 78.70% of Python3 online submissions for Find t
 
 
 class Solution:
-    def findTheDifference(self, s: str, t: str) -> str:
+    def find_the_difference(self, s: str, t: str) -> str:
         result_s = collections.Counter(s)
         result_t = collections.Counter(t)
         for k, v in result_t.items():

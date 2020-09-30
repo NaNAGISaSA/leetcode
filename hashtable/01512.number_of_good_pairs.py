@@ -8,7 +8,7 @@ Memory Usage: 13.9 MB, less than 100.00% of Python3 online submissions for Numbe
 
 
 class Solution:
-    def numIdenticalPairs(self, nums: List[int]) -> int:
+    def num_identical_pairs(self, nums: List[int]) -> int:
         d = {}
         for number in nums:
             d[number] = d.get(number, 0) + 1

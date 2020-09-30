@@ -9,7 +9,7 @@ Memory Usage: 13.6 MB, less than 83.33% of Python3 online submissions for Keyboa
 
 
 class Solution:
-    def findWords(self, words: List[str]) -> List[str]:
+    def find_words(self, words: List[str]) -> List[str]:
         row_one = set('qwertyuiop')
         row_tow = set('asdfghjkl')
         row_three = set('zxcvbnm')

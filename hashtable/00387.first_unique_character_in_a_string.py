@@ -9,7 +9,7 @@ Memory Usage: 14 MB, less than 29.69% of Python3 online submissions for First Un
 
 
 class Solution:
-    def firstUniqChar(self, s: str) -> int:
+    def first_uniq_char(self, s: str) -> int:
         d = {}
         for char in s:
             d[char] = d.get(char, 0) + 1
@@ -26,7 +26,7 @@ Memory Usage: 14 MB, less than 30.50% of Python3 online submissions for First Un
 
 
 class Solution2:
-    def firstUniqChar(self, s: str) -> int:
+    def first_uniq_char(self, s: str) -> int:
         count = collections.Counter(s)
         for index, char in enumerate(s):
             if count[char] == 1:

@@ -7,7 +7,7 @@ Time Limit Exceeded
 
 
 class Solution:
-    def findAnagrams(self, s: str, p: str) -> List[int]:
+    def find_anagrams(self, s: str, p: str) -> List[int]:
         sort_p = sorted(p)
         length_p = len(p)
         return [index for index in range(0, len(s) - length_p + 1) if sorted(s[index:index + length_p]) == sort_p]
@@ -19,7 +19,7 @@ Time Limit Exceeded
 
 
 class Solution2:
-    def findAnagrams(self, s: str, p: str) -> List[int]:
+    def find_anagrams(self, s: str, p: str) -> List[int]:
         sort_p = sorted(p)
         set_p = set(p)
         length_p = len(p)
@@ -37,7 +37,7 @@ Memory Usage: 14.7 MB, less than 83.11% of Python3 online submissions for Find A
 
 
 class Solution3:
-    def findAnagrams(self, s: str, p: str) -> List[int]:
+    def find_anagrams(self, s: str, p: str) -> List[int]:
         d = {}
         for char in p:
             d[char] = d.get(char, 0) + 1
@@ -69,7 +69,7 @@ Memory Usage: 14.6 MB, less than 97.97% of Python3 online submissions for Find A
 
 
 class Solution4:
-    def findAnagrams(self, s: str, p: str) -> List[int]:
+    def find_anagrams(self, s: str, p: str) -> List[int]:
         d = {}
         for char in p:
             d[char] = d.get(char, 0) + 1

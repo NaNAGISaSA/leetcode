@@ -9,9 +9,9 @@ Memory Usage: 13.9 MB, less than 76.67% of Python3 online submissions for Island
 
 
 class Solution:
-    def islandPerimeter(self, grid: List[List[int]]) -> int:
+    def island_perimeter(self, grid: List[List[int]]) -> int:
         pad_grad = []
-        for i in range(len(grid)):
+        for i, _ in enumerate(grid):
             pad_grad.append([0, *grid[i], 0])
         pad_grad = [[0] * (len(grid[0]) + 2), *pad_grad, [0] * (len(grid[0]) + 2)]
         result = 0
@@ -30,7 +30,7 @@ Memory Usage: 13.9 MB, less than 91.90% of Python3 online submissions for Island
 
 
 class Solution2:
-    def islandPerimeter(self, grid: List[List[int]]) -> int:
+    def island_perimeter(self, grid: List[List[int]]) -> int:
         result = 0
         for y, content in enumerate(grid):
             for x, num in enumerate(content):

@@ -8,7 +8,7 @@ Memory Usage: 14.1 MB, less than 43.27% of Python3 online submissions for H-Inde
 
 
 class Solution:
-    def hIndex(self, citations: List[int]) -> int:
+    def h_index(self, citations: List[int]) -> int:
         if len(citations) == 1:
             return 1 if citations[0] >= 1 else 0
         sorted_citations = sorted(citations, reverse=True)
@@ -27,6 +27,6 @@ Memory Usage: 14.1 MB, less than 35.34% of Python3 online submissions for H-Inde
 
 
 class Solution2:
-    def hIndex(self, citations: List[int]) -> int:
+    def h_index(self, citations: List[int]) -> int:
         sort = sorted(citations, reverse=True)
         return sum([1 if number >= (index + 1) else 0 for index, number in enumerate(sort)])

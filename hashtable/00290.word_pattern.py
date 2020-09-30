@@ -6,7 +6,7 @@ Memory Usage: 14 MB, less than 5.33% of Python3 online submissions for Word Patt
 
 
 class Solution:
-    def wordPattern(self, pattern: str, str: str) -> bool:
+    def word_pattern(self, pattern: str, str: str) -> bool:  # pylint: disable=redefined-builtin
         split_list = str.split(' ')
         if len(pattern) != len(split_list) or len(set(pattern)) != len(set(split_list)):
             return False
@@ -21,7 +21,7 @@ Memory Usage: 13.9 MB, less than 40.24% of Python3 online submissions for Word P
 
 
 class Solution2:
-    def wordPattern(self, pattern: str, str: str) -> bool:
+    def word_pattern(self, pattern: str, str: str) -> bool:  # pylint: disable=redefined-builtin
         split_list = str.split(' ')
         return (len(pattern) == len(split_list)) and \
                (len(set(zip(pattern, split_list))) == len(set(pattern)) == len(set(split_list)))

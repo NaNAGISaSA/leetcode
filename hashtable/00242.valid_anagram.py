@@ -6,7 +6,7 @@ Memory Usage: 14.3 MB, less than 29.20% of Python3 online submissions for Valid 
 
 
 class Solution:
-    def isAnagram(self, s: str, t: str) -> bool:
+    def is_anagram(self, s: str, t: str) -> bool:
         if len(s) != len(t):
             return False
         sort_s = ''.join(sorted(s))
@@ -25,7 +25,7 @@ Memory Usage: 14.8 MB, less than 5.40% of Python3 online submissions for Valid A
 
 
 class Solution2:
-    def isAnagram(self, s: str, t: str) -> bool:
+    def is_anagram(self, s: str, t: str) -> bool:
         return sorted(s) == sorted(t)
 
 
@@ -36,7 +36,7 @@ Memory Usage: 14.1 MB, less than 72.33% of Python3 online submissions for Valid 
 
 
 class Solution3:
-    def isAnagram(self, s: str, t: str) -> bool:
+    def is_anagram(self, s: str, t: str) -> bool:
         ds, dt = {}, {}
         for char in s:
             ds[char] = ds.get(char, 0) + 1

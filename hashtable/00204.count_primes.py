@@ -5,7 +5,7 @@ Time out
 
 
 class Solution:
-    def countPrimes(self, n: int) -> int:
+    def count_primes(self, n: int) -> int:
         if n <= 2:
             return 0
         result = set(range(2, n))
@@ -34,7 +34,7 @@ class Solution2:
             begin += 1
         return True
 
-    def countPrimes(self, n: int) -> int:
+    def count_primes(self, n: int) -> int:
         if n <= 2:
             return 0
         count = 0
@@ -52,7 +52,7 @@ Memory Usage: 25.5 MB, less than 55.51% of Python3 online submissions for Count 
 
 class Solution3:
 
-    def countPrimes(self, n: int) -> int:
+    def count_primes(self, n: int) -> int:
         if n <= 2:
             return 0
         result = [True] * n

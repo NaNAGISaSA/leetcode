@@ -6,7 +6,7 @@ Memory Usage: 14 MB, less than 19.12% of Python3 online submissions for Bulls an
 
 
 class Solution:
-    def getHint(self, secret: str, guess: str) -> str:
+    def get_hint(self, secret: str, guess: str) -> str:
         d_s, d_g, d_b = {}, {}, {}
         num_bulls, num_cows = 0, 0
         for e in zip(secret, guess):
@@ -27,7 +27,7 @@ Memory Usage: 13.8 MB, less than 70.22% of Python3 online submissions for Bulls 
 
 
 class Solution2:
-    def getHint(self, secret: str, guess: str) -> str:
+    def get_hint(self, secret: str, guess: str) -> str:
         d_s, d_g = {}, {}
         num_bulls = 0
         for e in zip(secret, guess):
