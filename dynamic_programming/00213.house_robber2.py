@@ -52,7 +52,7 @@ class Solution2:
         return nums[-1]
 
     def rob(self, nums: List[int]) -> int:
-        if len(nums) == 0:
+        if not nums:
             return 0
         result = [nums[0]]
         for i in range(1, len(nums)):

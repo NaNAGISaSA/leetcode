@@ -11,7 +11,7 @@ class Solution:
     """
     @staticmethod
     def count(s, t):
-        if len(t) == 0:
+        if not t:
             return 1
         index = s.find(t[0])
         if index == -1:

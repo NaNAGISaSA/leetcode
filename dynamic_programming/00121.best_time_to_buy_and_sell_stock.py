@@ -14,7 +14,7 @@ class Solution:
                  price[i] - price_buy < profit_now -> sell_price = buy_price = price[i] if buy > price[i]
     """
     def max_profit(self, prices: List[int]) -> int:
-        if len(prices) == 0:
+        if not prices:
             return 0
         buy, profit = prices[0], 0
         profit_list = [0]
