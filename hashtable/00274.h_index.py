@@ -15,7 +15,7 @@ class Solution:
         paper_numbers = len(citations)
         for number in range(0, len(citations)):
             h = number + 1
-            if sorted_citations[number] >= h and sorted_citations[h - paper_numbers] <= h:
+            if sorted_citations[h - paper_numbers] <= h <= sorted_citations[number]:
                 return h
         return len(citations) if sum(citations) > 0 else 0
 

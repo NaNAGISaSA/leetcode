@@ -27,4 +27,6 @@ good-names = i,
              v,
              h,
              p,
-             dp
+             dp,
+             ds,
+             dt

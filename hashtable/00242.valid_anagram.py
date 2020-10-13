@@ -14,8 +14,7 @@ class Solution:
         for char in set(s):
             if sort_s.find(char) != sort_t.find(char):
                 return False
-        else:
-            return True
+        return True
 
 
 """

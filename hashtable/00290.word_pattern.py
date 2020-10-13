@@ -10,7 +10,7 @@ class Solution:
         split_list = str.split(' ')
         if len(pattern) != len(split_list) or len(set(pattern)) != len(set(split_list)):
             return False
-        set_join = set([''.join(e) for e in zip(pattern, split_list)])
+        set_join = {''.join(e) for e in zip(pattern, split_list)}
         return len(set_join) == len(set(pattern)) == len(set(split_list))
 
 

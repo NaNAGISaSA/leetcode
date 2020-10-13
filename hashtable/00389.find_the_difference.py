@@ -14,3 +14,4 @@ class Solution:
         for k, v in result_t.items():
             if k not in result_s or result_s.get(k) != v:
                 return k
+        return ''
