@@ -14,8 +14,8 @@ jobs:
         run: |
           git clone https://github.com/google/googletest.git
           cmake -Sgoogletest -Bgoogletest/build
-          cmake --build googletest/build --parallel --target install
-          rm -rf googletest
+          sudo cmake --build googletest/build --parallel --target install
+          sudo rm -rf googletest
 
       - uses: actions/checkout@v2
 
