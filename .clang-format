@@ -1,0 +1,12 @@
+BasedOnStyle: Chromium
+AccessModifierOffset: -4
+AlignTrailingComments: false
+AllowShortFunctionsOnASingleLine: None
+BinPackArguments: false
+BreakBeforeTernaryOperators: false
+ColumnLimit: 120
+IndentWidth: 4
+IndentWrappedFunctionNames: true
+SortIncludes: true
+Standard: Latest
+TabWidth: 4
