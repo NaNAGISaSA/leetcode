@@ -1,0 +1,2 @@
+
+namespace leetcode::question2 {}

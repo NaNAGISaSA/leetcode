@@ -13,10 +13,10 @@ add_compile_options(-Wall -Wextra -Wpedantic -Wconversion -Werror)
 
 set(sources "source_files")
 set(tests "test_files")
-set(target "main")
 
 file(GLOB_RECURSE sources "src/*.cc")
 file(GLOB tests "tests/*.cc")
 
-add_executable(target sources tests)
-target_link_libraries(target gtest gtest_main pthread)
+set(main "executable")
+add_executable(main ${sources} ${tests})
+target_link_libraries(main gtest gtest_main pthread)
