@@ -19,4 +19,5 @@ file(GLOB tests "tests/*.cc")
 
 set(main "executable")
 add_executable(main ${sources} ${tests})
+target_include_directories(main PRIVATE "include/leetcode")
 target_link_libraries(main gtest gtest_main pthread)
