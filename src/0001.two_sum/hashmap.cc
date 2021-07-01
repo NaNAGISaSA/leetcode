@@ -1,6 +1,5 @@
 #include <unordered_map>
-
-#include "two_sum.h"
+#include "0001_two_sum.h"
 
 namespace leetcode::two_sum::hashmap {
 

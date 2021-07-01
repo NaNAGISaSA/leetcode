@@ -1,7 +1,7 @@
 #include <gmock/gmock.h>
 #include <gtest/gtest.h>
 
-#include "two_sum.h"
+#include "0001_two_sum.h"
 
 using namespace leetcode::two_sum;
 
