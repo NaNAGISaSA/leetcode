@@ -26,6 +26,6 @@ ListNode* Solution::addTwoNumbers(ListNode* l1, ListNode* l2) {
         extra /= 10;
     }
     return dummy_head.next;
-};
+}
 
 }  // namespace leetcode::add_two_numbers::cleaner
