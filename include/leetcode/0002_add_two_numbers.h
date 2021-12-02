@@ -9,7 +9,7 @@ namespace leetcode::add_two_numbers {
 
 class Solution {
 public:
-    static ListNode* addTwoNumbers(ListNode* l1, ListNode* l2);
+    static ListNode* add_two_numbers(ListNode* l1, ListNode* l2);
 };
 
 }  // namespace leetcode::add_two_numbers

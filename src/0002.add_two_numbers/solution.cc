@@ -2,7 +2,7 @@
 
 namespace leetcode::add_two_numbers {
 
-ListNode* Solution::addTwoNumbers(ListNode* l1, ListNode* l2) {
+ListNode* Solution::add_two_numbers(ListNode* l1, ListNode* l2) {
     ListNode dummy_head;
     ListNode* current = &dummy_head;
     int extra = 0;
