@@ -1,6 +1,6 @@
 #include "0009_palindrome_number.h"
 
-namespace leetcode::palindrome_number {
+namespace leetcode::palindrome_number::first {
 
 bool Solution::is_palindrome(int x) {
     if (x < 0) {
@@ -21,4 +21,4 @@ bool Solution::is_palindrome(int x) {
     return true;
 }
 
-}  // namespace leetcode::palindrome_number
+}  // namespace leetcode::palindrome_number::first

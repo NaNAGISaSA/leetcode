@@ -3,10 +3,19 @@
 
 namespace leetcode::palindrome_number {
 
-class Solution {
-public:
-    static bool is_palindrome(int x);
-};
+#define SOLUTION_CLASS_DECLARATION        \
+    class Solution {                      \
+    public:                               \
+        static bool is_palindrome(int x); \
+    }
+
+namespace first {
+SOLUTION_CLASS_DECLARATION;
+}
+
+namespace faster {
+SOLUTION_CLASS_DECLARATION;
+}
 
 }  // namespace leetcode::palindrome_number
 

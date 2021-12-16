@@ -4,11 +4,20 @@
 
 using namespace leetcode::palindrome_number;
 
-TEST(PALINDROME_NUMBER, EXAMPLE_TEST) {
-    ASSERT_TRUE(Solution::is_palindrome(121));
-    ASSERT_TRUE(Solution::is_palindrome(11));
-    ASSERT_TRUE(Solution::is_palindrome(0));
-    ASSERT_FALSE(Solution::is_palindrome(10));
-    ASSERT_FALSE(Solution::is_palindrome(-121));
-    ASSERT_FALSE(Solution::is_palindrome(-1));
+TEST(PALINDROME_NUMBER, FIRST_SOLUTION_TEST) {
+    ASSERT_TRUE(first::Solution::is_palindrome(121));
+    ASSERT_TRUE(first::Solution::is_palindrome(11));
+    ASSERT_TRUE(first::Solution::is_palindrome(0));
+    ASSERT_FALSE(first::Solution::is_palindrome(10));
+    ASSERT_FALSE(first::Solution::is_palindrome(-121));
+    ASSERT_FALSE(first::Solution::is_palindrome(-1));
+}
+
+TEST(PALINDROME_NUMBER, FASTER_SOLUTION_TEST) {
+    ASSERT_TRUE(faster::Solution::is_palindrome(121));
+    ASSERT_TRUE(faster::Solution::is_palindrome(11));
+    ASSERT_TRUE(faster::Solution::is_palindrome(0));
+    ASSERT_FALSE(faster::Solution::is_palindrome(10));
+    ASSERT_FALSE(faster::Solution::is_palindrome(-121));
+    ASSERT_FALSE(faster::Solution::is_palindrome(-1));
 }
