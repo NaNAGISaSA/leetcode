@@ -5,10 +5,19 @@
 
 namespace leetcode::regular_expression_matching {
 
-class Solution {
-public:
-    static bool match(const std::string& s, const std::string& p);
-};
+#define SOLUTION_CLASS_DECLARATION                                     \
+    class Solution {                                                   \
+    public:                                                            \
+        static bool match(const std::string& s, const std::string& p); \
+    }
+
+namespace recurse {
+SOLUTION_CLASS_DECLARATION;
+}
+
+namespace dp {
+SOLUTION_CLASS_DECLARATION;
+}
 
 }  // namespace leetcode::regular_expression_matching
 

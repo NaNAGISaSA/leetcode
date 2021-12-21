@@ -1,6 +1,6 @@
 #include "0010_regular_expression_matching.h"
 
-namespace leetcode::regular_expression_matching {
+namespace leetcode::regular_expression_matching::recurse {
 
 namespace {
 bool internal_match(const std::string& s,
@@ -46,4 +46,4 @@ bool Solution::match(const std::string& s, const std::string& p) {
     return internal_match(s, 0, s.size(), p, 0, p.size());
 }
 
-}  // namespace leetcode::regular_expression_matching
+}  // namespace leetcode::regular_expression_matching::recurse
