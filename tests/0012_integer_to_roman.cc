@@ -4,8 +4,14 @@
 
 using namespace leetcode::integer_to_roman;
 
-TEST(INTEGER_TO_ROMAN, EXAMPLE_TEST) {
-    ASSERT_EQ(Solution::int_to_roman(3), "III");
-    ASSERT_EQ(Solution::int_to_roman(58), "LVIII");
-    ASSERT_EQ(Solution::int_to_roman(1994), "MCMXCIV");
+TEST(INTEGER_TO_ROMAN, FIRST_SOLUTION_TEST) {
+    ASSERT_EQ(first::Solution::int_to_roman(3), "III");
+    ASSERT_EQ(first::Solution::int_to_roman(58), "LVIII");
+    ASSERT_EQ(first::Solution::int_to_roman(1994), "MCMXCIV");
+}
+
+TEST(INTEGER_TO_ROMAN, ANOTHER_SOLUTION_TEST) {
+    ASSERT_EQ(another::Solution::int_to_roman(3), "III");
+    ASSERT_EQ(another::Solution::int_to_roman(58), "LVIII");
+    ASSERT_EQ(another::Solution::int_to_roman(1994), "MCMXCIV");
 }
