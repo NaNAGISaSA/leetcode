@@ -2,7 +2,7 @@
 
 #include "0013_roman_to_integer.h"
 
-namespace leetcode::roman_to_integer {
+namespace leetcode::roman_to_integer::first {
 
 int Solution::roman_to_int(const std::string& s) {
     static std::vector<std::string> roman{"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
@@ -20,4 +20,4 @@ int Solution::roman_to_int(const std::string& s) {
     return result;
 }
 
-}  // namespace leetcode::roman_to_integer
+}  // namespace leetcode::roman_to_integer::first

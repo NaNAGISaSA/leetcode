@@ -5,10 +5,19 @@
 
 namespace leetcode::roman_to_integer {
 
-class Solution {
-public:
-    static int roman_to_int(const std::string& s);
-};
+#define SOLUTION_CLASS_DECLARATION                     \
+    class Solution {                                   \
+    public:                                            \
+        static int roman_to_int(const std::string& s); \
+    }
+
+namespace first {
+SOLUTION_CLASS_DECLARATION;
+}
+
+namespace another {
+SOLUTION_CLASS_DECLARATION;
+}
 
 }  // namespace leetcode::roman_to_integer
 
