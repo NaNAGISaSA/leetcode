@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 
 #include "0002_add_two_numbers.h"
-#include "utils/linked_list_test_utils.h"
+#include "linked_list_test_utils.h"
 
 using leetcode::add_two_numbers::Solution;
 using leetcode::utils::LinkedListTestHelper;
