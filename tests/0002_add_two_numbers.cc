@@ -3,7 +3,7 @@
 #include "0002_add_two_numbers.h"
 #include "linked_list_test_utils.h"
 
-using leetcode::add_two_numbers::Solution;
+using namespace leetcode::add_two_numbers;
 using leetcode::utils::LinkedListTestHelper;
 
 TEST(ADD_TWO_NUMBER, EXAMPLE_TEST_ONE) {

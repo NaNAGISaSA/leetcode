@@ -1,6 +1,6 @@
-#include "0019.remove_nth_node_from_end_of_list.h"
+#include "0019_remove_nth_node_from_end_of_list.h"
 
-namespace leetcode::remove_nth_node_from_end_of_list {
+namespace leetcode::remove_nth_node_from_end_of_list::first {
 
 ListNode* Solution::remove_nth_from_end(ListNode* head, int n) {
     // Constraints: 1 <= sz <= 30, so head can not be nullptr
@@ -22,4 +22,4 @@ ListNode* Solution::remove_nth_from_end(ListNode* head, int n) {
     return head;
 }
 
-}  // namespace leetcode::remove_nth_node_from_end_of_list
+}  // namespace leetcode::remove_nth_node_from_end_of_list::first
