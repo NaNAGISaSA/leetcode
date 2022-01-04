@@ -3,7 +3,7 @@
 namespace leetcode::letter_combinations_of_a_phone_number {
 
 // The most voted methods for this problem use 1) FIFO Linkedlist and 2) recurse coding,
-// but the time complexity of these methods are also O(4^(length of digits)) as above.
+// but the time complexity of these methods are also O(4^(length of digits)) as below.
 std::vector<std::string> Solution::letter_combinations(const std::string& digits) {
     static const std::vector<std::vector<std::string>> vec{{"a", "b", "c"},
                                                            {"d", "e", "f"},
