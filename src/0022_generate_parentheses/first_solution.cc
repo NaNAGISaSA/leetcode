@@ -1,6 +1,6 @@
 #include "0022_generate_parentheses.h"
 
-namespace leetcode::generate_parentheses {
+namespace leetcode::generate_parentheses::first {
 
 namespace {
 std::vector<std::string> generate(int total, int prefix) {
@@ -25,4 +25,4 @@ std::vector<std::string> Solution::generate_parenthesis(int n) {
     return generate(n, 0);
 }
 
-}  // namespace leetcode::generate_parentheses
+}  // namespace leetcode::generate_parentheses::first

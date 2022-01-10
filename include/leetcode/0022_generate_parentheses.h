@@ -4,12 +4,21 @@
 #include <string>
 #include <vector>
 
+#define SOLUTION_CLASS_DECLARATION                                   \
+    class Solution {                                                 \
+    public:                                                          \
+        static std::vector<std::string> generate_parenthesis(int n); \
+    }
+
 namespace leetcode::generate_parentheses {
 
-class Solution {
-public:
-    static std::vector<std::string> generate_parenthesis(int n);
-};
+namespace first {
+SOLUTION_CLASS_DECLARATION;
+}
+
+namespace backtrack {
+SOLUTION_CLASS_DECLARATION;
+}
 
 }  // namespace leetcode::generate_parentheses
 
