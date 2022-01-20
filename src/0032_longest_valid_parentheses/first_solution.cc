@@ -3,7 +3,7 @@
 
 #include "0032_longest_valid_parentheses.h"
 
-namespace leetcode::longest_valid_parentheses {
+namespace leetcode::longest_valid_parentheses::dp {
 
 int Solution::longest_valid_parentheses(const std::string& s) {
     if (s.size() < 2) {
@@ -25,4 +25,4 @@ int Solution::longest_valid_parentheses(const std::string& s) {
     return max_valid;
 }
 
-}  // namespace leetcode::longest_valid_parentheses
+}  // namespace leetcode::longest_valid_parentheses::dp

@@ -5,10 +5,19 @@
 
 namespace leetcode::longest_valid_parentheses {
 
-class Solution {
-public:
-    static int longest_valid_parentheses(const std::string& s);
-};
+#define SOLUTION_CLASS_DECLARATION                                  \
+    class Solution {                                                \
+    public:                                                         \
+        static int longest_valid_parentheses(const std::string& s); \
+    }
+
+namespace dp {
+SOLUTION_CLASS_DECLARATION;
+}
+
+namespace stack {
+SOLUTION_CLASS_DECLARATION;
+}
 
 }  // namespace leetcode::longest_valid_parentheses
 
