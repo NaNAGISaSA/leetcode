@@ -1,6 +1,6 @@
 #include "0033_search_in_rotated_sorted_array.h"
 
-namespace leetcode::search_in_rotated_sorted_array {
+namespace leetcode::search_in_rotated_sorted_array::one_path {
 
 int Solution::search(const std::vector<int>& nums, int target) {
     int start = 0, middle = 0, end = static_cast<int>(nums.size() - 1);
@@ -26,4 +26,4 @@ int Solution::search(const std::vector<int>& nums, int target) {
     return -1;
 }
 
-}  // namespace leetcode::search_in_rotated_sorted_array
+}  // namespace leetcode::search_in_rotated_sorted_array::one_path
