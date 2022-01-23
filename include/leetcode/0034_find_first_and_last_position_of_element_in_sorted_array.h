@@ -5,10 +5,19 @@
 
 namespace leetcode::find_first_and_last_position_of_element_in_sorted_array {
 
-class Solution {
-public:
-    static std::vector<int> search_range(const std::vector<int>& nums, int target);
-};
+#define SOLUTION_CLASS_DECLARATION                                                      \
+    class Solution {                                                                    \
+    public:                                                                             \
+        static std::vector<int> search_range(const std::vector<int>& nums, int target); \
+    }
+
+namespace first {
+SOLUTION_CLASS_DECLARATION;
+}
+
+namespace another {
+SOLUTION_CLASS_DECLARATION;
+}
 
 }  // namespace leetcode::find_first_and_last_position_of_element_in_sorted_array
 

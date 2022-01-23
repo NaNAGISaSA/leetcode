@@ -2,7 +2,7 @@
 
 #include "0034_find_first_and_last_position_of_element_in_sorted_array.h"
 
-namespace leetcode::find_first_and_last_position_of_element_in_sorted_array {
+namespace leetcode::find_first_and_last_position_of_element_in_sorted_array::first {
 
 namespace {
 std::vector<int> binary_search(const std::vector<int>& nums,
@@ -37,4 +37,4 @@ std::vector<int> Solution::search_range(const std::vector<int>& nums, int target
                               binary_search(nums, 0, static_cast<int>(nums.size() - 1), target, "middle");
 }
 
-}  // namespace leetcode::find_first_and_last_position_of_element_in_sorted_array
+}  // namespace leetcode::find_first_and_last_position_of_element_in_sorted_array::first
