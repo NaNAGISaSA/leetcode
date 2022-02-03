@@ -5,10 +5,19 @@
 
 namespace leetcode::first_missing_positive {
 
-class Solution {
-public:
-    static int first_missing_positive(std::vector<int>& nums);
-};
+#define SOLUTION_CLASS_DECLARATION                                 \
+    class Solution {                                               \
+    public:                                                        \
+        static int first_missing_positive(std::vector<int>& nums); \
+    }
+
+namespace one_path {
+SOLUTION_CLASS_DECLARATION;
+}
+
+namespace two_path {
+SOLUTION_CLASS_DECLARATION;
+}
 
 }  // namespace leetcode::first_missing_positive
 

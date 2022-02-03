@@ -1,6 +1,6 @@
 #include "0041_first_missing_positive.h"
 
-namespace leetcode::first_missing_positive {
+namespace leetcode::first_missing_positive::one_path {
 
 int Solution::first_missing_positive(std::vector<int>& nums) {
     int left = 0, right = static_cast<int>(nums.size());
@@ -16,4 +16,4 @@ int Solution::first_missing_positive(std::vector<int>& nums) {
     return left + 1;
 }
 
-}  // namespace leetcode::first_missing_positive
+}  // namespace leetcode::first_missing_positive::one_path
