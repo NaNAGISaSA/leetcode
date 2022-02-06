@@ -12,30 +12,23 @@ bool Solution::match(const std::string& s, const std::string& p) {
         dp_matrix[s_size][i] = dp_matrix[s_size][i + 2] && p[i + 1] == '*';
     }
     dp_matrix[s_size - 1][p_size - 1] = p[p_size - 1] == '.' || s[s_size - 1] == p[p_size - 1];
-    for (int i = p_size - 2; i >= 0; --i) {
-        for (int j = s_size - 1; j >= 0; --j) {
-            if (p[i + 1] != '*') {
-                bool first_match = p[i] == '.' || s[j] == p[i];
-                dp_matrix[j][i] = first_match && dp_matrix[j + 1][i + 1];
+    for (int i = s_size - 1; i >= 0; --i) {
+        for (int j = p_size - 2; j >= 0; --j) {
+            if (p[j + 1] != '*') {
+                dp_matrix[i][j] = (p[j] == '.' || s[i] == p[j]) && dp_matrix[i + 1][j + 1];
                 continue;
             }
-            if (p[i] != '.' && s[j] != p[i]) {
-                dp_matrix[j][i] = dp_matrix[j][i + 2];
+            if (dp_matrix[i][j + 2]) {
+                dp_matrix[i][j] = true;
                 continue;
             }
-            if (dp_matrix[j][i + 2]) {
-                dp_matrix[j][i] = true;
-                continue;
-            }
-            int tmp = j;
-            while (tmp < s_size && (p[i] == '.' || p[i] == s[tmp])) {
-                if (dp_matrix[tmp + 1][i + 2]) {
-                    dp_matrix[j][i] = true;
+            int tmp = i;
+            while (tmp < s_size && (s[tmp++] == p[j] || p[j] == '.')) {
+                if (dp_matrix[tmp][j + 2]) {
+                    dp_matrix[i][j] = true;
                     break;
                 }
-                ++tmp;
             }
-            dp_matrix[j][i] = dp_matrix[j][i] || dp_matrix[tmp][i + 2];
         }
     }
     return dp_matrix[0][0];
