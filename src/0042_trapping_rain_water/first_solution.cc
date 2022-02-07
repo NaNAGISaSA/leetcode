@@ -2,7 +2,7 @@
 
 #include "0042_trapping_rain_water.h"
 
-namespace leetcode::trapping_rain_water {
+namespace leetcode::trapping_rain_water::first {
 
 int Solution::trap(const std::vector<int>& height) {
     if (height.size() < 3) {
