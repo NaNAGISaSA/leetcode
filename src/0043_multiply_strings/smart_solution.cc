@@ -2,7 +2,7 @@
 
 #include "0043_multiply_strings.h"
 
-namespace leetcode::multiply_strings {
+namespace leetcode::multiply_strings::smart {
 
 std::string Solution::multiply(const std::string& num1, const std::string& num2) {
     // 1 <= num1.length, num2.length <= 200
@@ -26,4 +26,4 @@ std::string Solution::multiply(const std::string& num1, const std::string& num2)
     return result.front() == '0' ? result.substr(1) : result;
 }
 
-}  // namespace leetcode::multiply_strings
+}  // namespace leetcode::multiply_strings::smart
