@@ -2,7 +2,7 @@
 
 #include "0044_wildcard_matching.h"
 
-namespace leetcode::wildcard_matching {
+namespace leetcode::wildcard_matching::dp {
 
 bool Solution::is_match(const std::string& s, const std::string& p) {
     int s_size = static_cast<int>(s.size()), p_size = static_cast<int>(p.size());
@@ -28,4 +28,4 @@ bool Solution::is_match(const std::string& s, const std::string& p) {
     return dp_matrix[0][0];
 }
 
-}  // namespace leetcode::wildcard_matching
+}  // namespace leetcode::wildcard_matching::dp
