@@ -2,7 +2,7 @@
 
 #include "0046_permutations.h"
 
-namespace leetcode::permutations {
+namespace leetcode::permutations::common_backtrace {
 
 namespace {
 void backtrace(const std::vector<int>& nums,
@@ -26,7 +26,7 @@ void backtrace(const std::vector<int>& nums,
 }
 }  // namespace
 
-std::vector<std::vector<int>> Solution::permute(const std::vector<int>& nums) {
+std::vector<std::vector<int>> Solution::permute(std::vector<int>& nums) {
     std::vector<std::vector<int>> result;
     std::vector<int> curr_vec;
     std::unordered_set<int> appear;
@@ -34,4 +34,4 @@ std::vector<std::vector<int>> Solution::permute(const std::vector<int>& nums) {
     return result;
 }
 
-}  // namespace leetcode::permutations
+}  // namespace leetcode::permutations::common_backtrace
