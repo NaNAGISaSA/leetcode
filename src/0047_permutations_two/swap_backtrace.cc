@@ -2,7 +2,7 @@
 
 #include "0047_permutations_two.h"
 
-namespace leetcode::permutations_two {
+namespace leetcode::permutations_two::swap {
 
 namespace {
 void backtrace(std::vector<int>& nums, std::vector<std::vector<int>>& result, size_t begin) {
@@ -29,4 +29,4 @@ std::vector<std::vector<int>> Solution::permute_unique(std::vector<int>& nums) {
     return result;
 }
 
-}  // namespace leetcode::permutations_two
+}  // namespace leetcode::permutations_two::swap
