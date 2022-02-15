@@ -3,7 +3,7 @@
 
 #include "0048_rotate_image.h"
 
-using namespace leetcode::rotate;
+using namespace leetcode::rotate_image;
 
 TEST(ROTATE_IMAGE, EXAMPLE_TEST) {
     std::vector<std::vector<int>> mat1{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}},

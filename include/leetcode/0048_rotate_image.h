@@ -3,13 +3,13 @@
 
 #include <vector>
 
-namespace leetcode::rotate {
+namespace leetcode::rotate_image {
 
 class Solution {
 public:
     static void rotate(std::vector<std::vector<int>>& matrix);
 };
 
-}  // namespace leetcode::rotate
+}  // namespace leetcode::rotate_image
 
 #endif
