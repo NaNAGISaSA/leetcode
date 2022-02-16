@@ -3,7 +3,7 @@
 
 #include "0049_group_anagrams.h"
 
-namespace leetcode::group_anagrams {
+namespace leetcode::group_anagrams::sort {
 
 std::vector<std::vector<std::string>> Solution::group_anagrams(std::vector<std::string>& strs) {
     std::unordered_map<std::string, std::vector<std::string>> result_map;
@@ -22,4 +22,4 @@ std::vector<std::vector<std::string>> Solution::group_anagrams(std::vector<std::
     return result;
 }
 
-}  // namespace leetcode::group_anagrams
+}  // namespace leetcode::group_anagrams::sort

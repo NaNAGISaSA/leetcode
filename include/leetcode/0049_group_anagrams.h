@@ -6,10 +6,19 @@
 
 namespace leetcode::group_anagrams {
 
-class Solution {
-public:
-    static std::vector<std::vector<std::string>> group_anagrams(std::vector<std::string>& strs);
-};
+#define SOLUTION_CLASS_DECLARATION                                                                   \
+    class Solution {                                                                                 \
+    public:                                                                                          \
+        static std::vector<std::vector<std::string>> group_anagrams(std::vector<std::string>& strs); \
+    }
+
+namespace sort {
+SOLUTION_CLASS_DECLARATION;
+}
+
+namespace encode {
+SOLUTION_CLASS_DECLARATION;
+}
 
 }  // namespace leetcode::group_anagrams
 
