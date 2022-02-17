@@ -2,7 +2,7 @@
 
 #include "0050_pow_x_n.h"
 
-namespace leetcode::pow_x_n {
+namespace leetcode::pow_x_n::recurse {
 
 namespace {
 double recurse_pow(double result, double x_pow, double x, int n_pow, int n) {
@@ -26,4 +26,4 @@ double Solution::my_pow(double x, int n) {
                    recurse_pow(1.0, 1 / x, 1 / x, 1, -1 * n);
 }
 
-}  // namespace leetcode::pow_x_n
+}  // namespace leetcode::pow_x_n::recurse
