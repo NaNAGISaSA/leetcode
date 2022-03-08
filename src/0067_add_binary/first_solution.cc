@@ -2,7 +2,7 @@
 
 #include "0067_add_binary.h"
 
-namespace leetcode::add_binary {
+namespace leetcode::add_binary::first {
 
 std::string Solution::add_binary(const std::string& a, const std::string& b) {
     size_t small_size = std::min(a.size(), b.size());
@@ -29,4 +29,4 @@ std::string Solution::add_binary(const std::string& a, const std::string& b) {
     return result;
 }
 
-}  // namespace leetcode::add_binary
+}  // namespace leetcode::add_binary::first
