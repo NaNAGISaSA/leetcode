@@ -1,4 +1,4 @@
-#include <gmock/gmock.h>
+#include <gtest/gtest.h>
 
 #include "0068_text_justification.h"
 
