@@ -2,7 +2,7 @@
 
 #include "0071_simplify_path.h"
 
-namespace leetcode::simplify_path {
+namespace leetcode::simplify_path::first {
 
 std::string Solution::simplify_path(const std::string& path) {
     // the path starts with a slash '/', and is a valid absolute Unix path.
@@ -51,4 +51,4 @@ std::string Solution::simplify_path(const std::string& path) {
     return res;
 }
 
-}  // namespace leetcode::simplify_path
+}  // namespace leetcode::simplify_path::first
