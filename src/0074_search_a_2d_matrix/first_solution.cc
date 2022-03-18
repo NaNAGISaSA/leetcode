@@ -1,6 +1,6 @@
 #include "0074_search_a_2d_matrix.h"
 
-namespace leetcode::search_a_2d_matrix {
+namespace leetcode::search_a_2d_matrix::first {
 
 bool Solution::search_matrix(const std::vector<std::vector<int>>& matrix, int target) {
     auto binary_search = [&matrix, &target](int row) {
@@ -30,4 +30,4 @@ bool Solution::search_matrix(const std::vector<std::vector<int>>& matrix, int ta
     return false;
 }
 
-}  // namespace leetcode::search_a_2d_matrix
+}  // namespace leetcode::search_a_2d_matrix::first

@@ -5,10 +5,19 @@
 
 namespace leetcode::search_a_2d_matrix {
 
-class Solution {
-public:
-    static bool search_matrix(const std::vector<std::vector<int>>& matrix, int target);
-};
+#define SOLUTION_CLASS_DECLARATION                                                          \
+    class Solution {                                                                        \
+    public:                                                                                 \
+        static bool search_matrix(const std::vector<std::vector<int>>& matrix, int target); \
+    }
+
+namespace first {
+SOLUTION_CLASS_DECLARATION;
+}
+
+namespace bs {
+SOLUTION_CLASS_DECLARATION;
+}
 
 }  // namespace leetcode::search_a_2d_matrix
 

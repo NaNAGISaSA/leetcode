@@ -16,27 +16,14 @@ std::string Solution::simplify_path(const std::string& path) {
             break;
         }
         end = start;
-        if (path[start] == '.') {
-            while (end < path_size && path[end] == '.') {
-                ++end;
-            }
-            if (end == path_size || path[end] == '/') {
-                if (end - start == 2 && result.size() > 0) {
-                    result.pop_back();
-                } else if (end - start > 2) {
-                    result.push_back(path.substr(start, end - start));
-                }
-            } else {
-                while (end < path_size && path[end] != '/') {
-                    ++end;
-                }
-                result.push_back(path.substr(start, end - start));
-            }
-        } else {
-            while (end < path_size && path[end] != '/') {
-                ++end;
-            }
-            result.push_back(path.substr(start, end - start));
+        while (end < path_size && path[end] != '/') {
+            ++end;
+        }
+        std::string ele = path.substr(start, end - start);
+        if (ele == ".." && !result.empty()) {
+            result.pop_back();
+        } else if (ele != "." && ele != "..") {
+            result.push_back(std::move(ele));
         }
         start = end;
     }
