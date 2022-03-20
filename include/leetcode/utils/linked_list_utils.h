@@ -1,7 +1,7 @@
 #ifndef _LEETCODE_UTILS_LINKED_LIST_UTILS_H_
 #define _LEETCODE_UTILS_LINKED_LIST_UTILS_H_
 
-namespace leetcode::utils {
+namespace leetcode {
 
 struct ListNode {
     ListNode() : val(0), next(nullptr) {
@@ -14,6 +14,6 @@ struct ListNode {
     ListNode* next;
 };
 
-}  // namespace leetcode::utils
+}  // namespace leetcode
 
 #endif

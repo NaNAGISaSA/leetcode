@@ -3,8 +3,8 @@
 #include "0023_merge_k_sorted_lists.h"
 #include "linked_list_test_utils.h"
 
-using leetcode::utils::LinkedListTestHelper;
 using namespace leetcode::merge_k_sorted_lists;
+using namespace leetcode;
 
 TEST(MERGE_K_SORTED_LISTS, EXAMPLE_TEST) {
     ListNode* list1 = LinkedListTestHelper<int>::make_linked_list(1, 4);

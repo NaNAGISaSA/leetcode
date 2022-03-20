@@ -1,11 +1,11 @@
-#ifndef _LEETCODE_UTILS_LINKED_LIST_TEST_UTILS_H_
-#define _LEETCODE_UTILS_LINKED_LIST_TEST_UTILS_H_
+#ifndef _LEETCODE_TESTS_LINKED_LIST_TEST_UTILS_H_
+#define _LEETCODE_TESTS_LINKED_LIST_TEST_UTILS_H_
 
 #include <type_traits>
 
 #include "utils/linked_list_utils.h"
 
-namespace leetcode::utils {
+namespace leetcode {
 
 template <typename T>
 class LinkedListTestHelper {
@@ -38,6 +38,6 @@ private:
     }
 };
 
-}  // namespace leetcode::utils
+}  // namespace leetcode
 
 #endif

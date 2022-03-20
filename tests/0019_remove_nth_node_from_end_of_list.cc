@@ -4,7 +4,7 @@
 #include "linked_list_test_utils.h"
 
 using namespace leetcode::remove_nth_node_from_end_of_list;
-using leetcode::utils::LinkedListTestHelper;
+using namespace leetcode;
 
 TEST(REMOVE_NTH_NODE_FROM_END_OF_LIST, FIRST_SOLUTION_TEST) {
     ListNode* head = LinkedListTestHelper<int>::make_linked_list(1, 2, 3);

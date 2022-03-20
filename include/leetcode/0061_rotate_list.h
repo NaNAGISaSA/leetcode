@@ -3,8 +3,6 @@
 
 #include "utils/linked_list_utils.h"
 
-using leetcode::utils::ListNode;
-
 namespace leetcode::rotate_list {
 
 class Solution {

@@ -5,8 +5,6 @@
 
 #include "utils/linked_list_utils.h"
 
-using leetcode::utils::ListNode;
-
 namespace leetcode::merge_k_sorted_lists {
 
 class Solution {

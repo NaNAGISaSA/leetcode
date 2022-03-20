@@ -3,8 +3,6 @@
 
 #include "utils/linked_list_utils.h"
 
-using leetcode::utils::ListNode;
-
 namespace leetcode::remove_nth_node_from_end_of_list {
 
 #define SOLUTION_CLASS_DECLARATION                                   \

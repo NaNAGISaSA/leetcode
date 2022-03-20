@@ -4,7 +4,7 @@
 #include "linked_list_test_utils.h"
 
 using namespace leetcode::rotate_list;
-using leetcode::utils::LinkedListTestHelper;
+using namespace leetcode;
 
 TEST(ROTATE_LIST, EXAMPLE_TEST) {
     ListNode* list1 = LinkedListTestHelper<int>::make_linked_list(1, 2, 3);

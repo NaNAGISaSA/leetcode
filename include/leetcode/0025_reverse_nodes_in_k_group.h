@@ -3,8 +3,6 @@
 
 #include "utils/linked_list_utils.h"
 
-using leetcode::utils::ListNode;
-
 namespace leetcode::reverse_nodes_in_k_group {
 
 class Solution {

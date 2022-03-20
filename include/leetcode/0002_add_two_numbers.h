@@ -3,8 +3,6 @@
 
 #include "utils/linked_list_utils.h"
 
-using leetcode::utils::ListNode;
-
 namespace leetcode::add_two_numbers {
 
 class Solution {

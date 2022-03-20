@@ -3,8 +3,8 @@
 #include "0025_reverse_nodes_in_k_group.h"
 #include "linked_list_test_utils.h"
 
-using leetcode::utils::LinkedListTestHelper;
 using namespace leetcode::reverse_nodes_in_k_group;
+using namespace leetcode;
 
 TEST(REVERSE_NODES_IN_K_GROUP, EXAMPLE_TEST) {
     ListNode* list1 = LinkedListTestHelper<int>::make_linked_list(1, 2, 3, 4, 5);

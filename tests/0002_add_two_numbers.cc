@@ -4,7 +4,7 @@
 #include "linked_list_test_utils.h"
 
 using namespace leetcode::add_two_numbers;
-using leetcode::utils::LinkedListTestHelper;
+using namespace leetcode;
 
 TEST(ADD_TWO_NUMBER, EXAMPLE_TEST_ONE) {
     ListNode* node1 = LinkedListTestHelper<int>::make_linked_list(2, 4, 3);
