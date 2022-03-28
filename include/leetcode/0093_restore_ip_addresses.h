@@ -6,10 +6,19 @@
 
 namespace leetcode::restore_ip_addresses {
 
-class Solution {
-public:
-    static std::vector<std::string> restore_ip_addresses(const std::string& s);
-};
+#define SOLUTION_CLASS_DECLARATION                                                  \
+    class Solution {                                                                \
+    public:                                                                         \
+        static std::vector<std::string> restore_ip_addresses(const std::string& s); \
+    }
+
+namespace backtrace {
+SOLUTION_CLASS_DECLARATION;
+}
+
+namespace direct {
+SOLUTION_CLASS_DECLARATION;
+}
 
 }  // namespace leetcode::restore_ip_addresses
 

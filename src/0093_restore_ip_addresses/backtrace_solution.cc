@@ -1,6 +1,6 @@
 #include "0093_restore_ip_addresses.h"
 
-namespace leetcode::restore_ip_addresses {
+namespace leetcode::restore_ip_addresses::backtrace {
 
 namespace {
 void backtrace(std::vector<std::string>& res,
@@ -46,4 +46,4 @@ std::vector<std::string> Solution::restore_ip_addresses(const std::string& s) {
     return res;
 }
 
-}  // namespace leetcode::restore_ip_addresses
+}  // namespace leetcode::restore_ip_addresses::backtrace
