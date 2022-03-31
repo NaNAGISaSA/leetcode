@@ -1,6 +1,6 @@
 #include "0101_symmetric_tree.h"
 
-namespace leetcode::symmetric_tree {
+namespace leetcode::symmetric_tree::recurse {
 
 namespace {
 bool is_symmetric_tree(const TreeNode* root1, const TreeNode* root2) {
@@ -16,4 +16,4 @@ bool Solution::is_symmetric(TreeNode* root) {
     return is_symmetric_tree(root->left, root->right);
 }
 
-}  // namespace leetcode::symmetric_tree
+}  // namespace leetcode::symmetric_tree::recurse

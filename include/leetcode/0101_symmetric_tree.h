@@ -5,10 +5,19 @@
 
 namespace leetcode::symmetric_tree {
 
-class Solution {
-public:
-    static bool is_symmetric(TreeNode* root);
-};
+#define SOLUTION_CLASS_DECLARATION                \
+    class Solution {                              \
+    public:                                       \
+        static bool is_symmetric(TreeNode* root); \
+    }
+
+namespace recurse {
+SOLUTION_CLASS_DECLARATION;
+}
+
+namespace stack {
+SOLUTION_CLASS_DECLARATION;
+}
 
 }  // namespace leetcode::symmetric_tree
 
