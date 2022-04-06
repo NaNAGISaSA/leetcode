@@ -13,7 +13,7 @@ int Solution::num_distinct(const std::string& s, const std::string& t) {
     if (s_size == t_size) {
         return s == t ? 1 : 0;
     }
-    // dp[i][j] = num_distinct(s.subtr(i), t.substr(j))
+    // dp[i][j] = num_distinct(s.substr(i), t.substr(j))
     std::vector<std::vector<long>> dp_mat(s_size, std::vector<long>(t_size, 0));
     dp_mat.back().back() = s.back() == t.back() ? 1 : 0;
     for (int i = s_size - 2; i >= 0; --i) {
