@@ -1,6 +1,6 @@
 #include "0122_best_time_to_buy_and_sell_stock_two.h"
 
-namespace leetcode::best_time_to_buy_and_sell_stock_two {
+namespace leetcode::best_time_to_buy_and_sell_stock_two::greedy {
 
 int Solution::max_profit(const std::vector<int>& prices) {
     int begin = prices[0];
@@ -14,4 +14,4 @@ int Solution::max_profit(const std::vector<int>& prices) {
     return result;
 }
 
-}  // namespace leetcode::best_time_to_buy_and_sell_stock_two
+}  // namespace leetcode::best_time_to_buy_and_sell_stock_two::greedy
