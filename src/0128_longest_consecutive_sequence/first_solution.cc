@@ -2,7 +2,7 @@
 
 #include "0128_longest_consecutive_sequence.h"
 
-namespace leetcode::longest_consecutive_sequence {
+namespace leetcode::longest_consecutive_sequence::first {
 
 int Solution::longest_consecutive(const std::vector<int>& nums) {
     std::unordered_map<int, int> map;
@@ -28,4 +28,4 @@ int Solution::longest_consecutive(const std::vector<int>& nums) {
     return result;
 }
 
-}  // namespace leetcode::longest_consecutive_sequence
+}  // namespace leetcode::longest_consecutive_sequence::first
