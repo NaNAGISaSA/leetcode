@@ -5,10 +5,19 @@
 
 namespace leetcode::sort_list {
 
-class Solution {
-public:
-    static ListNode* sort_list(ListNode* head);
-};
+#define SOLUTION_CLASS_DECLARATION                  \
+    class Solution {                                \
+    public:                                         \
+        static ListNode* sort_list(ListNode* head); \
+    }
+
+namespace heap_sort {
+SOLUTION_CLASS_DECLARATION;
+}
+
+namespace merge_sort {
+SOLUTION_CLASS_DECLARATION;
+}
 
 }  // namespace leetcode::sort_list
 

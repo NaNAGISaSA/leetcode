@@ -3,7 +3,7 @@
 
 #include "0148_sort_list.h"
 
-namespace leetcode::sort_list {
+namespace leetcode::sort_list::heap_sort {
 
 ListNode* Solution::sort_list(ListNode* head) {
     if (head == nullptr) {
@@ -27,4 +27,4 @@ ListNode* Solution::sort_list(ListNode* head) {
     return dummy.get()->next;
 }
 
-}  // namespace leetcode::sort_list
+}  // namespace leetcode::sort_list::heap_sort
