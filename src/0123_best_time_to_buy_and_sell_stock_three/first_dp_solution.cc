@@ -2,7 +2,7 @@
 
 #include "0123_best_time_to_buy_and_sell_stock_three.h"
 
-namespace leetcode::best_time_to_buy_and_sell_stock_three {
+namespace leetcode::best_time_to_buy_and_sell_stock_three::first_dp {
 
 int Solution::max_profit(const std::vector<int>& prices) {
     int prices_size = static_cast<int>(prices.size()), max_profit = 0;
@@ -19,4 +19,4 @@ int Solution::max_profit(const std::vector<int>& prices) {
     return max_profit;
 }
 
-}  // namespace leetcode::best_time_to_buy_and_sell_stock_three
+}  // namespace leetcode::best_time_to_buy_and_sell_stock_three::first_dp
