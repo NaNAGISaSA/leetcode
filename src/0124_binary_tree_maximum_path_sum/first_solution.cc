@@ -1,9 +1,8 @@
 #include <algorithm>
-#include <limits>
 
 #include "0124_binary_tree_maximum_path_sum.h"
 
-namespace leetcode::binary_tree_maximum_path_sum {
+namespace leetcode::binary_tree_maximum_path_sum::first {
 
 namespace {
 struct TreeInfo {
@@ -38,4 +37,4 @@ int Solution::max_path_sum(TreeNode* root) {
     return traverse_tree(root).max_sum;
 }
 
-}  // namespace leetcode::binary_tree_maximum_path_sum
+}  // namespace leetcode::binary_tree_maximum_path_sum::first
