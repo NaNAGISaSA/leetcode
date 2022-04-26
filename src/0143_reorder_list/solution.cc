@@ -25,15 +25,14 @@ void Solution::reorder_list(ListNode* head) {
     fast = reserve_list(slow->next);
     slow->next = nullptr;
     slow = head;
-    ListNode* next1 = nullptr;
-    ListNode* next2 = nullptr;
+    ListNode* next = nullptr;
     while (fast != nullptr) {
-        next1 = slow->next;
-        next2 = fast->next;
+        next = slow->next;
         slow->next = fast;
-        fast->next = next1;
-        slow = next1;
-        fast = next2;
+        slow = next;
+        next = fast->next;
+        fast->next = slow;
+        fast = next;
     }
 }
 
