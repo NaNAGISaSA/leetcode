@@ -14,10 +14,21 @@ struct Node {
     std::vector<Node*> neighbors;
 };
 
-class Solution {
-public:
-    static Node* clone_graph(Node* node);
-};
+#define SOLUTION_CLASS_DECLARATION            \
+    class Solution {                          \
+    public:                                   \
+        static Node* clone_graph(Node* node); \
+    }
+
+namespace bfs {
+SOLUTION_CLASS_DECLARATION;
+}
+
+namespace dfs {
+SOLUTION_CLASS_DECLARATION;
+}
+
+#undef SOLUTION_CLASS_DECLARATION
 
 }  // namespace leetcode::clone_graph
 

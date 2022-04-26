@@ -3,16 +3,7 @@
 
 #include "0133_clone_graph.h"
 
-namespace leetcode::clone_graph {
-
-Node::Node() : val(0), neighbors({}) {
-}
-
-Node::Node(int _val) : val(_val), neighbors({}) {
-}
-
-Node::Node(int _val, std::vector<Node*> _neighbors) : val(_val), neighbors(_neighbors) {
-}
+namespace leetcode::clone_graph::bfs {
 
 Node* Solution::clone_graph(Node* node) {
     if (node == nullptr) {
@@ -36,4 +27,4 @@ Node* Solution::clone_graph(Node* node) {
     return node_map[node->val];
 }
 
-}  // namespace leetcode::clone_graph
+}  // namespace leetcode::clone_graph::bfs
