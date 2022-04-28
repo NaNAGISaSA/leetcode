@@ -6,10 +6,21 @@
 
 namespace leetcode::word_break_two {
 
-class Solution {
-public:
-    static std::vector<std::string> word_break(std::string& s, std::vector<std::string>& word_dict);
-};
+#define SOLUTION_CLASS_DECLARATION                                                                       \
+    class Solution {                                                                                     \
+    public:                                                                                              \
+        static std::vector<std::string> word_break(std::string& s, std::vector<std::string>& word_dict); \
+    }
+
+namespace common_dfs {
+SOLUTION_CLASS_DECLARATION;
+}
+
+namespace memorized_dfs {
+SOLUTION_CLASS_DECLARATION;
+}
+
+#undef SOLUTION_CLASS_DECLARATION
 
 }  // namespace leetcode::word_break_two
 

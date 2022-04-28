@@ -3,7 +3,7 @@
 
 #include "0140_word_break_two.h"
 
-namespace leetcode::word_break_two {
+namespace leetcode::word_break_two::common_dfs {
 
 namespace {
 void backtrace(const std::string& s,
@@ -49,4 +49,4 @@ std::vector<std::string> Solution::word_break(std::string& s, std::vector<std::s
     return result;
 }
 
-}  // namespace leetcode::word_break_two
+}  // namespace leetcode::word_break_two::common_dfs
