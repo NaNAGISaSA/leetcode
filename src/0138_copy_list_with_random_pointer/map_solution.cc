@@ -2,10 +2,7 @@
 
 #include "0138_copy_list_with_random_pointer.h"
 
-namespace leetcode::copy_list_with_random_pointer {
-
-Node::Node(int val_) : val(val_), next(nullptr), random(nullptr) {
-}
+namespace leetcode::copy_list_with_random_pointer::map {
 
 Node* Solution::copy_random_list(Node* head) {
     std::unordered_map<Node*, Node*> map{{nullptr, nullptr}};
@@ -23,4 +20,4 @@ Node* Solution::copy_random_list(Node* head) {
     return map[head];
 }
 
-}  // namespace leetcode::copy_list_with_random_pointer
+}  // namespace leetcode::copy_list_with_random_pointer::map
