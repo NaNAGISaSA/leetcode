@@ -29,10 +29,10 @@ Node* Solution::copy_random_list(Node* head) {
         next = head->next->next;
         if (next != nullptr) {
             cp_head->next = next->next;
-            cp_head = cp_head->next;
         }
         head->next = next;
         head = next;
+        cp_head = cp_head->next;
     }
     return ret_head;
 }
