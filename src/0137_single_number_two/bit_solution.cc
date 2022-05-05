@@ -1,6 +1,6 @@
 #include "0137_single_number_two.h"
 
-namespace leetcode::single_number_two {
+namespace leetcode::single_number_two::bit_method {
 
 int Solution::single_number(const std::vector<int>& nums) {
     int result = 0;
@@ -18,4 +18,4 @@ int Solution::single_number(const std::vector<int>& nums) {
     return result;
 }
 
-}  // namespace leetcode::single_number_two
+}  // namespace leetcode::single_number_two::bit_method

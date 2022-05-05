@@ -5,10 +5,21 @@
 
 namespace leetcode::single_number_two {
 
-class Solution {
-public:
-    static int single_number(const std::vector<int>& nums);
-};
+#define SOLUTION_CLASS_DECLARATION                              \
+    class Solution {                                            \
+    public:                                                     \
+        static int single_number(const std::vector<int>& nums); \
+    }
+
+namespace bit_method {
+SOLUTION_CLASS_DECLARATION;
+}
+
+namespace xor_method {
+SOLUTION_CLASS_DECLARATION;
+}
+
+#undef SOLUTION_CLASS_DECLARATION
 
 }  // namespace leetcode::single_number_two
 
