@@ -1,6 +1,6 @@
 #include "0151_reverse_words_in_a_string.h"
 
-namespace leetcode::reverse_words_in_a_string {
+namespace leetcode::reverse_words_in_a_string::direct {
 
 std::string Solution::reverse_words(std::string& s) {
     // There is at least one word in s
@@ -24,4 +24,4 @@ std::string Solution::reverse_words(std::string& s) {
     return result;
 }
 
-}  // namespace leetcode::reverse_words_in_a_string
+}  // namespace leetcode::reverse_words_in_a_string::direct

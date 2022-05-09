@@ -5,10 +5,19 @@
 
 namespace leetcode::reverse_words_in_a_string {
 
-class Solution {
-public:
-    static std::string reverse_words(std::string& s);
-};
+#define SOLUTION_CLASS_DECLARATION                        \
+    class Solution {                                      \
+    public:                                               \
+        static std::string reverse_words(std::string& s); \
+    }
+
+namespace direct {
+SOLUTION_CLASS_DECLARATION;
+}
+
+namespace inplace {
+SOLUTION_CLASS_DECLARATION;
+}
 
 }  // namespace leetcode::reverse_words_in_a_string
 
