@@ -5,10 +5,19 @@
 
 namespace leetcode::intersection_of_two_linked_lists {
 
-class Solution {
-public:
-    static ListNode* get_intersection_node(ListNode* head1, ListNode* head2);
-};
+#define SOLUTION_CLASS_DECLARATION                                                \
+    class Solution {                                                              \
+    public:                                                                       \
+        static ListNode* get_intersection_node(ListNode* head1, ListNode* head2); \
+    }
+
+namespace first {
+SOLUTION_CLASS_DECLARATION;
+}
+
+namespace smart {
+SOLUTION_CLASS_DECLARATION;
+}
 
 }  // namespace leetcode::intersection_of_two_linked_lists
 

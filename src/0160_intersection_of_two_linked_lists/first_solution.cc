@@ -1,6 +1,6 @@
 #include "0160_intersection_of_two_linked_lists.h"
 
-namespace leetcode::intersection_of_two_linked_lists {
+namespace leetcode::intersection_of_two_linked_lists::first {
 
 ListNode* Solution::get_intersection_node(ListNode* head1, ListNode* head2) {
     ListNode* cp_head1 = head1;
@@ -36,4 +36,4 @@ ListNode* Solution::get_intersection_node(ListNode* head1, ListNode* head2) {
     return cp_head1;
 }
 
-}  // namespace leetcode::intersection_of_two_linked_lists
+}  // namespace leetcode::intersection_of_two_linked_lists::first
