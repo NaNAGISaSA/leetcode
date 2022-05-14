@@ -51,7 +51,7 @@ public:
 
 class LRUCache::Impl {
 public:
-    Impl(int capacity_) : cache{0}, key_node_map{}, node_key_map{}, capacity(capacity_) {
+    Impl(int capacity_) : cache{0}, key_node_map{}, node_key_map{}, capacity{capacity_} {
     }
 
     int get(int key) {
@@ -98,7 +98,7 @@ int LRUCache::get(int key) {
 }
 
 void LRUCache::put(int key, int value) {
-    return impl->put(key, value);
+    impl->put(key, value);
 }
 
 }  // namespace leetcode::lru_cache
