@@ -19,7 +19,7 @@ int Solution::maximum_gap(const std::vector<int>& nums) {
     std::vector<int> bucket_min_num(num_size + 1, max_num);
     std::vector<bool> bucket_has_num(num_size + 1, false);
     for (auto& num : nums) {
-        size_t bucket_num = static_cast<size_t>((num - min_num) * num_size / (max_num - min_num));
+        size_t bucket_num = (num - min_num) * num_size / (max_num - min_num);
         bucket_max_num[bucket_num] = std::max(bucket_max_num[bucket_num], num);
         bucket_min_num[bucket_num] = std::min(bucket_min_num[bucket_num], num);
         bucket_has_num[bucket_num] = true;
