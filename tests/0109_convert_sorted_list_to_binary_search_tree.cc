@@ -1,6 +1,7 @@
+#include "0109_convert_sorted_list_to_binary_search_tree.h"
+
 #include <gtest/gtest.h>
 
-#include "0109_convert_sorted_list_to_binary_search_tree.h"
 #include "linked_list_test_utils.h"
 #include "tree_test_utils.h"
 

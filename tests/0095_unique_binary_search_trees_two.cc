@@ -1,6 +1,7 @@
+#include "0095_unique_binary_search_trees_two.h"
+
 #include <gtest/gtest.h>
 
-#include "0095_unique_binary_search_trees_two.h"
 #include "tree_test_utils.h"
 
 using namespace leetcode::unique_binary_search_trees_two;

@@ -1,6 +1,7 @@
+#include "0108_convert_sorted_array_to_binary_search_tree.h"
+
 #include <gtest/gtest.h>
 
-#include "0108_convert_sorted_array_to_binary_search_tree.h"
 #include "tree_test_utils.h"
 
 using namespace leetcode::convert_sorted_array_to_binary_search_tree;

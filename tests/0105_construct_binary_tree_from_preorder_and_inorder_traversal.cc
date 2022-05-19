@@ -1,6 +1,7 @@
+#include "0105_construct_binary_tree_from_preorder_and_inorder_traversal.h"
+
 #include <gtest/gtest.h>
 
-#include "0105_construct_binary_tree_from_preorder_and_inorder_traversal.h"
 #include "tree_test_utils.h"
 
 using namespace leetcode::construct_binary_tree_from_preorder_and_inorder_traversal;

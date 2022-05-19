@@ -5,19 +5,29 @@
 
 namespace leetcode {
 
-enum class Type { NONE, ALL, LEFT, RIGHT };
+enum class Type { LEFT, RIGHT };
 
 class TreeTestHelper {
 public:
-    static TreeNode* make_tree(Type type, int head_val, int left_val = -1, int right_val = -1) {
-        TreeNode* head = new TreeNode(head_val);
-        if (type == Type::ALL || type == Type::LEFT) {
-            head->left = new TreeNode(left_val);
+    static TreeNode* make_tree(int val) {
+        return new TreeNode(val);
+    }
+
+    static TreeNode* make_tree(Type type, int val, int lr) {
+        TreeNode* root = new TreeNode(val);
+        if (type == Type::LEFT) {
+            root->left = new TreeNode(lr);
+        } else {
+            root->right = new TreeNode(lr);
         }
-        if (type == Type::ALL || type == Type::RIGHT) {
-            head->right = new TreeNode(right_val);
-        }
-        return head;
+        return root;
+    }
+
+    static TreeNode* make_tree(int val, int left, int right) {
+        TreeNode* root = new TreeNode(val);
+        root->left = new TreeNode(left);
+        root->right = new TreeNode(right);
+        return root;
     }
 
     static void release_tree(TreeNode* head) {
