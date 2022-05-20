@@ -12,10 +12,9 @@ public:
 
     int next() {
         TreeNode* node = node_stack.top();
+        node_stack.pop();
         if (node->right != nullptr) {
             add_nodes_to_stack(node->right);
-        } else {
-            remove_nodes_from_stack();
         }
         return node->val;
     }
@@ -30,18 +29,6 @@ private:
             node_stack.push(root);
             root = root->left;
         } while (root != nullptr);
-    }
-
-    void remove_nodes_from_stack() {
-        TreeNode* node = node_stack.top();
-        node_stack.pop();
-        if (node_stack.empty()) {
-            return;
-        }
-        TreeNode* root = node_stack.top();
-        if (root->right == node) {
-            remove_nodes_from_stack();
-        }
     }
 
     std::stack<TreeNode*> node_stack;
