@@ -1,6 +1,6 @@
-#include <algorithm>
-
 #include "0188_best_time_to_buy_and_sell_stock_four.h"
+
+#include <algorithm>
 
 namespace leetcode::best_time_to_buy_and_sell_stock_four {
 
