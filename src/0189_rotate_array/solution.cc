@@ -1,6 +1,6 @@
-#include <algorithm>
-
 #include "0189_rotate_array.h"
+
+#include <algorithm>
 
 namespace leetcode::rotate_array {
 
