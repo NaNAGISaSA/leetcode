@@ -1,6 +1,6 @@
 #include "0190_reverse_bits.h"
 
-namespace leetcode::reverse_bits {
+namespace leetcode::reverse_bits::first {
 
 uint32_t Solution::reverse_bits(uint32_t n) {
     uint32_t result = 0;
@@ -11,4 +11,4 @@ uint32_t Solution::reverse_bits(uint32_t n) {
     return result;
 }
 
-}  // namespace leetcode::reverse_bits
+}  // namespace leetcode::reverse_bits::first
