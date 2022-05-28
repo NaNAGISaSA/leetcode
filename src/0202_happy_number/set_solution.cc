@@ -2,7 +2,7 @@
 
 #include <unordered_set>
 
-namespace leetcode::happy_number {
+namespace leetcode::happy_number::set {
 
 bool Solution::is_happy(int n) {
     auto get_square = [](int num) {

@@ -3,10 +3,19 @@
 
 namespace leetcode::happy_number {
 
-class Solution {
-public:
-    static bool is_happy(int n);
-};
+#define SOLUTION_CLASS_DECLARATION   \
+    class Solution {                 \
+    public:                          \
+        static bool is_happy(int n); \
+    }
+
+namespace set {
+SOLUTION_CLASS_DECLARATION;
+}
+
+namespace floyd_cycle {
+SOLUTION_CLASS_DECLARATION;
+}
 
 }  // namespace leetcode::happy_number
 
