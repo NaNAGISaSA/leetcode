@@ -17,8 +17,7 @@ bool Solution::is_happy(int n) {
 
     std::unordered_set<int> appear{n};
     while (true) {
-        int tmp = get_square(n);
-        n = tmp;
+        n = get_square(n);
         if (appear.find(n) != appear.end() || n == 1) {
             break;
         }
