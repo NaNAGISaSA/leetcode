@@ -1,9 +1,8 @@
 #include "0205_isomorphic_strings.h"
 
 #include <unordered_map>
-#include <unordered_set>
 
-namespace leetcode::isomorphic_strings {
+namespace leetcode::isomorphic_strings::map {
 
 bool Solution::is_isomorphic(const std::string& s, const std::string& t) {
     // No two characters may map to the same character,
@@ -24,4 +23,4 @@ bool Solution::is_isomorphic(const std::string& s, const std::string& t) {
     return true;
 }
 
-}  // namespace leetcode::isomorphic_strings
+}  // namespace leetcode::isomorphic_strings::map

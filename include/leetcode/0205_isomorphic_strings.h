@@ -5,10 +5,19 @@
 
 namespace leetcode::isomorphic_strings {
 
-class Solution {
-public:
-    static bool is_isomorphic(const std::string& s, const std::string& t);
-};
+#define SOLUTION_CLASS_DECLARATION                                             \
+    class Solution {                                                           \
+    public:                                                                    \
+        static bool is_isomorphic(const std::string& s, const std::string& t); \
+    }
+
+namespace map {
+SOLUTION_CLASS_DECLARATION;
+}
+
+namespace nomap {
+SOLUTION_CLASS_DECLARATION;
+}
 
 }  // namespace leetcode::isomorphic_strings
 

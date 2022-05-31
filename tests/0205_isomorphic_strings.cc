@@ -4,8 +4,14 @@
 
 using namespace leetcode::isomorphic_strings;
 
-TEST(ISOMORPHIC_STRINGS, EXAMPLE_TEST) {
-    ASSERT_TRUE(Solution::is_isomorphic("paper", "title"));
-    ASSERT_FALSE(Solution::is_isomorphic("foo", "bar"));
-    ASSERT_FALSE(Solution::is_isomorphic("badc", "baba"));
+TEST(ISOMORPHIC_STRINGS, MAP_SOLUTION_TEST) {
+    ASSERT_TRUE(map::Solution::is_isomorphic("paper", "title"));
+    ASSERT_FALSE(map::Solution::is_isomorphic("foo", "bar"));
+    ASSERT_FALSE(map::Solution::is_isomorphic("badc", "baba"));
+}
+
+TEST(ISOMORPHIC_STRINGS, NOMAP_SOLUTION_TEST) {
+    ASSERT_TRUE(nomap::Solution::is_isomorphic("paper", "title"));
+    ASSERT_FALSE(nomap::Solution::is_isomorphic("foo", "bar"));
+    ASSERT_FALSE(nomap::Solution::is_isomorphic("badc", "baba"));
 }
