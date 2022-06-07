@@ -5,10 +5,19 @@
 
 namespace leetcode::course_schedule {
 
-class Solution {
-public:
-    static bool can_finish(int num_courses, const std::vector<std::vector<int>>& prerequisites);
-};
+#define SOLUTION_CLASS_DECLARATION                                                                   \
+    class Solution {                                                                                 \
+    public:                                                                                          \
+        static bool can_finish(int num_courses, const std::vector<std::vector<int>>& prerequisites); \
+    }
+
+namespace bfs {
+SOLUTION_CLASS_DECLARATION;
+}
+
+namespace kahn {
+SOLUTION_CLASS_DECLARATION;
+}
 
 }  // namespace leetcode::course_schedule
 

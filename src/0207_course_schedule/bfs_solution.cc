@@ -1,6 +1,6 @@
 #include "0207_course_schedule.h"
 
-namespace leetcode::course_schedule {
+namespace leetcode::course_schedule::bfs {
 
 /*
 本题可以转化为：有向图是否成环。
@@ -35,4 +35,4 @@ bool Solution::can_finish(int num_courses, const std::vector<std::vector<int>>& 
     return true;
 }
 
-}  // namespace leetcode::course_schedule
+}  // namespace leetcode::course_schedule::bfs
