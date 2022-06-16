@@ -5,10 +5,19 @@
 
 namespace leetcode::kth_largest_element_in_an_array {
 
-class Solution {
-public:
-    static int find_kth_largest(const std::vector<int>& nums, int k);
-};
+#define SOLUTION_CLASS_DECLARATION                                  \
+    class Solution {                                                \
+    public:                                                         \
+        static int find_kth_largest(std::vector<int>& nums, int k); \
+    }
+
+namespace heap {
+SOLUTION_CLASS_DECLARATION;
+}
+
+namespace quick_select {
+SOLUTION_CLASS_DECLARATION;
+}
 
 }  // namespace leetcode::kth_largest_element_in_an_array
 

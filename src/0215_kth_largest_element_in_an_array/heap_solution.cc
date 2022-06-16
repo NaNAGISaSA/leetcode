@@ -2,9 +2,9 @@
 
 #include <queue>
 
-namespace leetcode::kth_largest_element_in_an_array {
+namespace leetcode::kth_largest_element_in_an_array::heap {
 
-int Solution::find_kth_largest(const std::vector<int>& nums, int k) {
+int Solution::find_kth_largest(std::vector<int>& nums, int k) {
     auto cmp = [](int a, int b) { return a > b; };
     std::priority_queue<int, std::vector<int>, decltype(cmp)> min_heap(cmp);
     size_t nums_size = nums.size();
@@ -20,4 +20,4 @@ int Solution::find_kth_largest(const std::vector<int>& nums, int k) {
     return min_heap.top();
 }
 
-}  // namespace leetcode::kth_largest_element_in_an_array
+}  // namespace leetcode::kth_largest_element_in_an_array::heap
