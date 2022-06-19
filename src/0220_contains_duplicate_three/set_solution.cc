@@ -2,7 +2,7 @@
 
 #include <set>
 
-namespace leetcode::contains_duplicate_three {
+namespace leetcode::contains_duplicate_three::set {
 
 /*
 维护一个k个元素的滑窗，保证abs(i - j) <= k；
@@ -27,4 +27,4 @@ bool Solution::contains_nearby_almost_duplicate(const std::vector<int>& nums, in
     return false;
 }
 
-}  // namespace leetcode::contains_duplicate_three
+}  // namespace leetcode::contains_duplicate_three::set

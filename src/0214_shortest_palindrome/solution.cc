@@ -7,7 +7,7 @@ namespace leetcode::shortest_palindrome {
 /*
 本题可以转化为寻找字符串起始的最长回文子串。
 算法思路：构造一个s+"#"+reverse(s)的字符串，并使用KMP算法中构造查找表的思路。
-如果存在回文串，则以上构造字符串一定存在大于2的子串既是prefix，又是postfix，
+如果存在回文串，则以上构造字符串一定存在大于等于2的子串既是prefix，又是suffix，
 例如：acad#daca -> aca, beebfd#dfbeeb -> beeb.
 */
 std::string Solution::shortest_palindrome(std::string s) {

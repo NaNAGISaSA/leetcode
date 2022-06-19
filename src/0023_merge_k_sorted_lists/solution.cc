@@ -21,14 +21,13 @@ ListNode* Solution::merge_k_lists(const std::vector<ListNode*>& lists) {
     }
     auto dummy = std::make_unique<ListNode>();
     ListNode* head = dummy.get();
-    ListNode* tmp = nullptr;
     while (min_heap.size()) {
-        tmp = min_heap.top()->next;
-        head->next = min_heap.top();
-        head = head->next;
+        ListNode* top = min_heap.top();
         min_heap.pop();
-        if (tmp != nullptr) {
-            min_heap.push(tmp);
+        head->next = top;
+        head = head->next;
+        if (top->next != nullptr) {
+            min_heap.push(top->next);
         }
     }
     return dummy->next;
