@@ -5,10 +5,19 @@
 
 namespace leetcode::maximal_square {
 
-class Solution {
-public:
-    static int maximal_square(std::vector<std::vector<char>>& matrix);
-};
+#define SOLUTION_CLASS_DECLARATION                                         \
+    class Solution {                                                       \
+    public:                                                                \
+        static int maximal_square(std::vector<std::vector<char>>& matrix); \
+    }
+
+namespace preprocess {
+SOLUTION_CLASS_DECLARATION;
+}
+
+namespace dp {
+SOLUTION_CLASS_DECLARATION;
+}
 
 }  // namespace leetcode::maximal_square
 

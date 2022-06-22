@@ -2,7 +2,7 @@
 
 #include <algorithm>
 
-namespace leetcode::maximal_square {
+namespace leetcode::maximal_square::preprocess {
 
 int Solution::maximal_square(std::vector<std::vector<char>>& matrix) {
     size_t m = matrix.size(), n = matrix[0].size();
@@ -34,4 +34,4 @@ int Solution::maximal_square(std::vector<std::vector<char>>& matrix) {
     return max_square * max_square;
 }
 
-}  // namespace leetcode::maximal_square
+}  // namespace leetcode::maximal_square::preprocess
