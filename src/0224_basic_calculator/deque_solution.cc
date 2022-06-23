@@ -2,7 +2,7 @@
 
 #include <deque>
 
-namespace leetcode::basic_calculator {
+namespace leetcode::basic_calculator::deque {
 
 namespace {
 void add_num_to_queue(std::deque<std::string>& queue, int num) {
@@ -58,4 +58,4 @@ int Solution::calculate(const std::string& s) {
     return recurse_calculate(s, 0, s.size()).first;
 }
 
-}  // namespace leetcode::basic_calculator
+}  // namespace leetcode::basic_calculator::deque
