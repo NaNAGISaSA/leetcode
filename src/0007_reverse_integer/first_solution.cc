@@ -40,20 +40,20 @@ int Solution::reverse(int x) {
         return reverse_number();
     }
 
-    number_count = 0;
+    number_count = 1;
     temp = 0;
-    while (number_count + 1 != max_number_count) {
+    while (number_count < max_number_count) {
         temp = 10 * temp + x % 10;
         x /= 10;
         ++number_count;
     }
-    if (x > 0 && temp <= std::numeric_limits<int>::max() / 10 && x <= std::numeric_limits<int>::max() % 10) {
-        return 10 * temp + x;
-    } else if (x < 0 && temp >= std::numeric_limits<int>::min() / 10 && x >= std::numeric_limits<int>::min() % 10) {
-        return 10 * temp + x;
-    } else {
-        return 0;
-    }
+
+    bool valid =
+        (x > 0 && (temp < std::numeric_limits<int>::max() / 10 ||
+                   (temp == std::numeric_limits<int>::max() / 10 && x <= std::numeric_limits<int>::max() % 10))) ||
+        (x < 0 && (temp > std::numeric_limits<int>::min() / 10 ||
+                   (temp == std::numeric_limits<int>::min() / 10 && x >= std::numeric_limits<int>::min() % 10)));
+    return valid ? 10 * temp + x : 0;
 }
 
 }  // namespace leetcode::reverse_integer::first
