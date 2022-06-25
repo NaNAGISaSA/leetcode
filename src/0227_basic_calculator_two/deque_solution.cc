@@ -3,7 +3,7 @@
 #include <deque>
 #include <unordered_map>
 
-namespace leetcode::basic_calculator_two {
+namespace leetcode::basic_calculator_two::deque {
 
 int Solution::calculate(const std::string& s) {
     static std::unordered_map<char, int> op_map{{'+', 0}, {'-', 1}, {'*', 2}, {'/', 3}};
@@ -46,4 +46,4 @@ int Solution::calculate(const std::string& s) {
     return result;
 }
 
-}  // namespace leetcode::basic_calculator_two
+}  // namespace leetcode::basic_calculator_two::deque

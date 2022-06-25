@@ -5,10 +5,19 @@
 
 namespace leetcode::basic_calculator_two {
 
-class Solution {
-public:
-    static int calculate(const std::string& s);
-};
+#define SOLUTION_CLASS_DECLARATION                  \
+    class Solution {                                \
+    public:                                         \
+        static int calculate(const std::string& s); \
+    }
+
+namespace deque {
+SOLUTION_CLASS_DECLARATION;
+}
+
+namespace stack {
+SOLUTION_CLASS_DECLARATION;
+}
 
 }  // namespace leetcode::basic_calculator_two
 
