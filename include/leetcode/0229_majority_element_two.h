@@ -5,10 +5,19 @@
 
 namespace leetcode::majority_element_two {
 
-class Solution {
-public:
-    static std::vector<int> majority_element(const std::vector<int>& nums);
-};
+#define SOLUTION_CLASS_DECLARATION                                              \
+    class Solution {                                                            \
+    public:                                                                     \
+        static std::vector<int> majority_element(const std::vector<int>& nums); \
+    }
+
+namespace common {
+SOLUTION_CLASS_DECLARATION;
+}
+
+namespace sp {
+SOLUTION_CLASS_DECLARATION;
+}
 
 }  // namespace leetcode::majority_element_two
 

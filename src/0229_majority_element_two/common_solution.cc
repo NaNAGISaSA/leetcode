@@ -2,7 +2,7 @@
 
 #include <unordered_map>
 
-namespace leetcode::majority_element_two {
+namespace leetcode::majority_element_two::common {
 
 // This is the common algorithm for k >= 2 case
 std::vector<int> Solution::majority_element(const std::vector<int>& nums) {
@@ -46,4 +46,4 @@ std::vector<int> Solution::majority_element(const std::vector<int>& nums) {
     return result;
 }
 
-}  // namespace leetcode::majority_element_two
+}  // namespace leetcode::majority_element_two::common
