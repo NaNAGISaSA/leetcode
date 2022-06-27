@@ -1,40 +1,34 @@
 #include "0039_combination_sum.h"
 
+#include <algorithm>
+
 namespace leetcode::combination_sum {
 
 namespace {
 void backtrack(const std::vector<int>& candidates,
-               const int target,
-               std::vector<int>& candidate_count,
-               const size_t index,
-               const int sum,
-               std::vector<std::vector<int>>& result) {
-    if (sum == target) {
-        std::vector<int> tmp;
-        for (size_t i = 0; i < index; ++i) {
-            for (int j = 0; j < candidate_count[i]; ++j) {
-                tmp.push_back(candidates[i]);
-            }
+               std::vector<std::vector<int>>& result,
+               std::vector<int>& curr,
+               const size_t start,
+               const int target) {
+    if (target <= 0) {
+        if (target == 0) {
+            result.push_back(curr);
         }
-        result.push_back(std::move(tmp));
         return;
     }
-    if (index == candidates.size() || sum > target) {
-        return;
-    }
-    int num = 0;
-    while (sum + num * candidates[index] <= target) {
-        candidate_count[index] = num;
-        backtrack(candidates, target, candidate_count, index + 1, sum + num * candidates[index], result);
-        ++num;
+    for (size_t i = start; i < candidates.size(); ++i) {
+        curr.push_back(candidates[i]);
+        backtrack(candidates, result, curr, i, target - candidates[i]);
+        curr.pop_back();
     }
 }
 }  // namespace
 
-std::vector<std::vector<int>> Solution::combination_sum(const std::vector<int>& candidates, int target) {
+std::vector<std::vector<int>> Solution::combination_sum(std::vector<int>& candidates, int target) {
     std::vector<std::vector<int>> result;
-    std::vector<int> candidate_count(candidates.size(), 0);
-    backtrack(candidates, target, candidate_count, 0, 0, result);
+    std::vector<int> curr;
+    std::sort(candidates.begin(), candidates.end());
+    backtrack(candidates, result, curr, 0, target);
     return result;
 }
 

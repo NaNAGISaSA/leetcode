@@ -7,7 +7,7 @@ namespace leetcode::combination_sum {
 
 class Solution {
 public:
-    static std::vector<std::vector<int>> combination_sum(const std::vector<int>& candidates, int target);
+    static std::vector<std::vector<int>> combination_sum(std::vector<int>& candidates, int target);
 };
 
 }  // namespace leetcode::combination_sum
