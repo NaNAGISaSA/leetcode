@@ -11,7 +11,7 @@ int bit_multi(int a, int b) {
     a = std::abs(a);
     b = std::abs(b);
     int result = 0;
-    for (int i = 31; i >= 0; --i) {
+    for (int i = 30; i >= 0; --i) {
         if ((b >> i) > 0) {
             result += (a << i);
             b -= (1 << i);
@@ -19,12 +19,13 @@ int bit_multi(int a, int b) {
     }
     return sign ? (~result) + 1 : result;
 }
+
 int bit_div(int a, int b) {
     bool sign = (a < 0 && b > 0) || (a > 0 && b < 0);
     a = std::abs(a);
     b = std::abs(b);
     int result = 0;
-    for (int i = 31; i >= 0; --i) {
+    for (int i = 30; i >= 0; --i) {
         if (b <= (a >> i)) {
             result |= (1 << i);
             a -= (b << i);

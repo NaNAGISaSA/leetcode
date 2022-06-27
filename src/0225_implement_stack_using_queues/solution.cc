@@ -7,10 +7,9 @@ MyStack::MyStack() : queue{} {
 
 void MyStack::push(int x) {
     queue.push(x);
-    size_t adjust_size = queue.size() - 1;
-    while (adjust_size != 0) {
+    size_t adjust_size = queue.size();
+    while (--adjust_size != 0) {
         queue.push(pop());
-        --adjust_size;
     }
 }
 
