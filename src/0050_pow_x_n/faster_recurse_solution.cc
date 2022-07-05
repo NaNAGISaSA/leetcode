@@ -12,7 +12,11 @@ double Solution::my_pow(double x, int n) {
         return 1;
     }
     if (n < 0) {
-        return n == std::numeric_limits<int>::min() ? my_pow(1 / x, -1 * (n + 1)) / x : my_pow(1 / x, -1 * n);
+        if (n == std::numeric_limits<int>::min()) {
+            return my_pow(1 / x, -1 * (1 + n)) / x;
+        } else {
+            return my_pow(1 / x, -n);
+        }
     }
     return n % 2 == 0 ? my_pow(x * x, n / 2) : x * my_pow(x * x, n / 2);
 }
