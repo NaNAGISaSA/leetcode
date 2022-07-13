@@ -3,7 +3,7 @@
 #include <algorithm>
 #include <vector>
 
-namespace leetcode::perfect_squares {
+namespace leetcode::perfect_squares::dp {
 
 int Solution::num_squares(int n) {
     std::vector<int> dp_vec(n + 1, n);
@@ -16,4 +16,4 @@ int Solution::num_squares(int n) {
     return dp_vec.back();
 }
 
-}  // namespace leetcode::perfect_squares
+}  // namespace leetcode::perfect_squares::dp
