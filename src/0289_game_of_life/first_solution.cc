@@ -1,6 +1,6 @@
 #include "0289_game_of_life.h"
 
-namespace leetcode::game_of_life {
+namespace leetcode::game_of_life::first {
 
 /*
  * Rule For Live Cells
@@ -14,32 +14,14 @@ namespace leetcode::game_of_life {
 void Solution::game_of_life(std::vector<std::vector<int>>& board) {
     // live to died -> 3, died to live -> 2
     size_t m = board.size(), n = board[0].size();
+    int neighbors[8][2] = {{-1, -1}, {-1, 0}, {-1, 1}, {0, -1}, {0, 1}, {1, -1}, {1, 0}, {1, 1}};
 
-    auto count_lives = [m = m, n = n, &board](size_t i, size_t j) {
+    auto count_lives = [m = m, n = n, &board, &neighbors](size_t i, size_t j) {
         int lives = 0;
-        if (i - 1 < m) {
-            lives += (board[i - 1][j] & 0x01);
-            if (j - 1 < n) {
-                lives += (board[i - 1][j - 1] & 0x01);
+        for (auto neighbor : neighbors) {
+            if (i + neighbor[0] < m && j + neighbor[1] < n) {
+                lives += board[i + neighbor[0]][j + neighbor[1]] & 0x01;
             }
-            if (j + 1 < n) {
-                lives += (board[i - 1][j + 1] & 0x01);
-            }
-        }
-        if (i + 1 < m) {
-            lives += (board[i + 1][j] & 0x01);
-            if (j - 1 < n) {
-                lives += (board[i + 1][j - 1] & 0x01);
-            }
-            if (j + 1 < n) {
-                lives += (board[i + 1][j + 1] & 0x01);
-            }
-        }
-        if (j - 1 < n) {
-            lives += (board[i][j - 1] & 0x01);
-        }
-        if (j + 1 < n) {
-            lives += (board[i][j + 1] & 0x01);
         }
         return lives;
     };
@@ -63,4 +45,4 @@ void Solution::game_of_life(std::vector<std::vector<int>>& board) {
     }
 }
 
-}  // namespace leetcode::game_of_life
+}  // namespace leetcode::game_of_life::first

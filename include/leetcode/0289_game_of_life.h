@@ -5,10 +5,19 @@
 
 namespace leetcode::game_of_life {
 
-class Solution {
-public:
-    static void game_of_life(std::vector<std::vector<int>>& board);
-};
+#define SOLUTION_CLASS_DECLARATION                                      \
+    class Solution {                                                    \
+    public:                                                             \
+        static void game_of_life(std::vector<std::vector<int>>& board); \
+    }
+
+namespace first {
+SOLUTION_CLASS_DECLARATION;
+}
+
+namespace cleaner {
+SOLUTION_CLASS_DECLARATION;
+}
 
 }  // namespace leetcode::game_of_life
 
