@@ -7,7 +7,7 @@ namespace leetcode::n_queens_two {
 namespace {
 bool is_valid(const std::vector<int>& column, int curr_col) {
     int curr_row = static_cast<int>(column.size());
-    for (int i = 0; i < static_cast<int>(column.size()); ++i) {
+    for (int i = 0; i < curr_row; ++i) {
         if (curr_col == column[i] || curr_row - i == curr_col - column[i] || curr_row - i == column[i] - curr_col) {
             return false;
         }
