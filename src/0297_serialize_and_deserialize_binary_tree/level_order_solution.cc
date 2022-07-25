@@ -1,29 +1,10 @@
 #include "0297_serialize_and_deserialize_binary_tree.h"
 
 #include <queue>
-#include <vector>
 
-namespace leetcode::serialize_and_deserialize_binary_tree {
+#include "serialize_and_deserialize_utils.h"
 
-namespace {
-static const char SPLITER = '#';
-static const char NULLPTR_MARK = '.';
-static const std::string SPLITER_STR = "#";
-static const std::string NULLPTR_MARK_STR = ".";
-
-std::vector<std::string> split(const std::string& str) {
-    std::vector<std::string> result;
-    size_t begin = 0, end = 0, str_size = str.size();
-    while (end < str_size) {
-        while (end < str_size && str[end] != SPLITER) {
-            ++end;
-        }
-        result.push_back(str.substr(begin, end - begin));
-        begin = ++end;
-    }
-    return result;
-}
-}  // namespace
+namespace leetcode::serialize_and_deserialize_binary_tree::level_order {
 
 std::string Codec::serialize(TreeNode* root) {
     if (root == nullptr) {
@@ -52,7 +33,7 @@ TreeNode* Codec::deserialize(const std::string& data) {
     if (data.size() == 1) {
         return nullptr;
     }
-    auto data_vec = split(data);
+    std::vector<std::string> data_vec = split(data);
     std::queue<TreeNode*> node_queue;
     TreeNode* root = new TreeNode(std::stoi(data_vec.front()));
     node_queue.push(root);
@@ -77,4 +58,4 @@ TreeNode* Codec::deserialize(const std::string& data) {
     return root;
 }
 
-}  // namespace leetcode::serialize_and_deserialize_binary_tree
+}  // namespace leetcode::serialize_and_deserialize_binary_tree::level_order
