@@ -5,30 +5,27 @@
 namespace leetcode::permutation_sequence {
 
 std::string Solution::get_permutation(int n, int k) {
-    std::vector<int> factorial{1};
-    std::vector<char> nums;
-    for (int i = 1; i < n; ++i) {
-        factorial.push_back(factorial.back() * i);
-        nums.push_back(static_cast<char>('0' + i));
+    std::vector<int> multi(n, 1), num(n, 1);
+    for (int i = 2; i <= n; ++i) {
+        num[i - 1] = i;
+        multi[n - i] = (i - 1) * multi[n - i + 1];
     }
-    nums.push_back(static_cast<char>('0' + n));
 
-    auto delete_element = [&nums](int idx) {
-        auto it = nums.begin();
-        while (idx-- != 0) {
-            it = std::next(it);
+    auto delete_element = [&num](int number) {
+        auto it = num.begin();
+        while (*it != number) {
+            ++it;
         }
-        nums.erase(it);
+        num.erase(it);
     };
 
     std::string result;
-    result.reserve(n);
-    --k;  // key of this algorithm
-    for (int i = 1; i <= n; ++i) {
-        int idx = k / factorial[n - i];
-        result.push_back(nums[idx]);
-        delete_element(idx);
-        k -= idx * factorial[n - i];
+    --k;  // key of this alg
+    for (int i = 0; i < n; ++i) {
+        int idx = k / multi[i];
+        result.push_back(static_cast<char>('0' + num[idx]));
+        delete_element(num[idx]);
+        k -= idx * multi[i];
     }
     return result;
 }
