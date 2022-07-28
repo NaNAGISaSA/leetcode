@@ -5,10 +5,19 @@
 
 namespace leetcode::bulls_and_cows {
 
-class Solution {
-public:
-    static std::string get_hint(const std::string& secret, const std::string& guess);
-};
+#define SOLUTION_CLASS_DECLARATION                                                        \
+    class Solution {                                                                      \
+    public:                                                                               \
+        static std::string get_hint(const std::string& secret, const std::string& guess); \
+    }
+
+namespace two_pass {
+SOLUTION_CLASS_DECLARATION;
+}
+
+namespace one_pass {
+SOLUTION_CLASS_DECLARATION;
+}
 
 }  // namespace leetcode::bulls_and_cows
 

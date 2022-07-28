@@ -3,7 +3,7 @@
 #include <algorithm>
 #include <unordered_map>
 
-namespace leetcode::bulls_and_cows {
+namespace leetcode::bulls_and_cows::two_pass {
 
 std::string Solution::get_hint(const std::string& secret, const std::string& guess) {
     std::unordered_map<char, std::pair<int, int>> cow_map;
@@ -32,4 +32,4 @@ std::string Solution::get_hint(const std::string& secret, const std::string& gue
     return result;
 }
 
-}  // namespace leetcode::bulls_and_cows
+}  // namespace leetcode::bulls_and_cows::two_pass
