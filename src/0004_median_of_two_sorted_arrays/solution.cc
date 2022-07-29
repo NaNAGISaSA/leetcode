@@ -34,15 +34,15 @@ double find_k_number(const std::vector<int>& vec1, const std::vector<int>& vec2,
         return static_cast<double>(find_upper_median(vec1, 0, kth - 1, vec2, 0, kth - 1));
     } else if (kth > lsize) {
         /*
-        Common Case:
-        if (vec2[kth - lsize - 1] >= vec1[lsize - 1]) {
-            return static_cast<double>(vec2[kth - lsize - 1]);
-        }
-        if (vec1[kth - ssize - 1] >= vec2[ssize - 1]) {
-            return static_cast<double>(vec1[kth - ssize - 1]);
-        }
-        return static_cast<double>(find_upper_median(vec1, kth - ssize, lsize - 1, vec2, kth - lsize, ssize - 1));
-        */
+         * Common Case:
+         * if (vec2[kth - lsize - 1] >= vec1[lsize - 1]) {
+         *     return static_cast<double>(vec2[kth - lsize - 1]);
+         * }
+         * if (vec1[kth - ssize - 1] >= vec2[ssize - 1]) {
+         *     return static_cast<double>(vec1[kth - ssize - 1]);
+         * }
+         * return static_cast<double>(find_upper_median(vec1, kth - ssize, lsize - 1, vec2, kth - lsize, ssize - 1));
+         */
 
         // For this problem, optimize as follows
         // if kth > long size, kth must be long size + 1

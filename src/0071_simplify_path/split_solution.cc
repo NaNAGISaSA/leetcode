@@ -1,4 +1,3 @@
-#include <queue>
 #include <vector>
 
 #include "0071_simplify_path.h"
@@ -18,7 +17,7 @@ std::string Solution::simplify_path(const std::string& path) {
     };
 
     auto vec = split();
-    std::deque<std::string> res;
+    std::vector<std::string> res;
     for (auto& str : vec) {
         if (str == ".." && !res.empty()) {
             res.pop_back();
@@ -32,12 +31,9 @@ std::string Solution::simplify_path(const std::string& path) {
     }
 
     std::string ret;
-    while (!res.empty()) {
-        ret += "/";
-        ret += std::move(res.front());
-        res.pop_front();
+    for (auto& str : res) {
+        ret.append(1, '/').append(std::move(str));
     }
-
     return ret;
 }
 
