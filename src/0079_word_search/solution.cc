@@ -5,10 +5,7 @@ bool backtrace(std::vector<std::vector<char>>& board, const std::string& word, s
     if (word_idx == word.size()) {
         return true;
     }
-    if (i >= board.size() || j >= board[0].size()) {
-        return false;
-    }
-    if (board[i][j] != word[word_idx]) {
+    if (i >= board.size() || j >= board[0].size() || board[i][j] != word[word_idx]) {
         return false;
     }
     char record = board[i][j];
