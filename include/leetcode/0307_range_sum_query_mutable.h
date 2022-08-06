@@ -8,7 +8,8 @@ namespace leetcode::range_sum_query_mutable {
 
 class NumArray {
 public:
-    NumArray(const std::vector<int>& nums);
+    NumArray(std::vector<int>& nums);
+    ~NumArray();
 
     void update(int index, int val);
     int sum_range(int left, int right);
