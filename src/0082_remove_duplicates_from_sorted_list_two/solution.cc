@@ -6,32 +6,34 @@ ListNode* Solution::delete_duplicates(ListNode* head) {
     if (head == nullptr) {
         return head;
     }
-    auto get_block_tail = [](ListNode* curr) {
-        while (curr->next != nullptr && curr->val == curr->next->val) {
-            curr = curr->next;
+    auto get_tail = [](ListNode* node) {
+        while (node->next != nullptr && node->val == node->next->val) {
+            node = node->next;
         }
-        return curr;
+        return node;
     };
     ListNode* prev = nullptr;
     ListNode* curr = head;
+    head = nullptr;
     while (curr != nullptr) {
-        ListNode* block_tail = get_block_tail(curr);
-        if (block_tail == curr) {
+        ListNode* tail = get_tail(curr);
+        if (tail == curr) {
             if (prev == nullptr) {
-                prev = curr;
                 head = curr;
+                prev = curr;
             } else {
                 prev->next = curr;
                 prev = prev->next;
             }
+            curr = curr->next;
         } else {
-            if (prev != nullptr) {
-                prev->next = block_tail->next;
-            }
+            curr = tail->next;
         }
-        curr = block_tail->next;
     }
-    return prev == nullptr ? nullptr : head;
+    if (prev != nullptr) {
+        prev->next = nullptr;
+    }
+    return head;
 }
 
 }  // namespace leetcode::remove_duplicates_from_sorted_list_two
