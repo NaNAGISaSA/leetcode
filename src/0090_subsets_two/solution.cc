@@ -3,9 +3,12 @@
 #include "0090_subsets_two.h"
 
 namespace {
-void backtrace(const std::vector<int>& nums, int start, std::vector<int>& acc, std::vector<std::vector<int>>& result) {
+void backtrace(const std::vector<int>& nums,
+               size_t start,
+               std::vector<int>& acc,
+               std::vector<std::vector<int>>& result) {
     result.push_back(acc);
-    for (int i = start; i < static_cast<int>(nums.size()); ++i) {
+    for (size_t i = start; i < nums.size(); ++i) {
         if (i != start && nums[i] == nums[i - 1]) {
             continue;
         }
