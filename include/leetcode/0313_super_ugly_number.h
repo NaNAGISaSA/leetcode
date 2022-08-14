@@ -5,10 +5,21 @@
 
 namespace leetcode::super_ugly_number {
 
-class Solution {
-public:
-    static int nth_super_ugly_number(int n, const std::vector<int>& primes);
-};
+#define SOLUTION_CLASS_DECLARATION                                               \
+    class Solution {                                                             \
+    public:                                                                      \
+        static int nth_super_ugly_number(int n, const std::vector<int>& primes); \
+    }
+
+namespace first {
+SOLUTION_CLASS_DECLARATION;
+}
+
+namespace heap {
+SOLUTION_CLASS_DECLARATION;
+}
+
+#undef SOLUTION_CLASS_DECLARATION
 
 }  // namespace leetcode::super_ugly_number
 

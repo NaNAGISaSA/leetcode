@@ -2,7 +2,7 @@
 
 #include <limits>
 
-namespace leetcode::super_ugly_number {
+namespace leetcode::super_ugly_number::first {
 
 int Solution::nth_super_ugly_number(int n, const std::vector<int>& primes) {
     size_t idx = 1, primes_size = primes.size();
@@ -23,4 +23,4 @@ int Solution::nth_super_ugly_number(int n, const std::vector<int>& primes) {
     return static_cast<int>(result.back());
 }
 
-}  // namespace leetcode::super_ugly_number
+}  // namespace leetcode::super_ugly_number::first
