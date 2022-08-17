@@ -4,7 +4,12 @@
 
 using namespace leetcode::remove_duplicate_letters;
 
-TEST(REMOVE_DUPLICATE_LETTERS, EXAMPLE_TEST) {
-    ASSERT_EQ(Solution::remove_duplicate_letters("bcabc"), "abc");
-    ASSERT_EQ(Solution::remove_duplicate_letters("cbacdcbc"), "acdb");
+TEST(REMOVE_DUPLICATE_LETTERS, SELECT_SOLUTION_TEST) {
+    ASSERT_EQ(select::Solution::remove_duplicate_letters("bcabc"), "abc");
+    ASSERT_EQ(select::Solution::remove_duplicate_letters("cbacdcbc"), "acdb");
+}
+
+TEST(REMOVE_DUPLICATE_LETTERS, DEQUE_SOLUTION_TEST) {
+    ASSERT_EQ(deque::Solution::remove_duplicate_letters("bcabc"), "abc");
+    ASSERT_EQ(deque::Solution::remove_duplicate_letters("cbacdcbc"), "acdb");
 }

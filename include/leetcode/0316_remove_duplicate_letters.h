@@ -5,10 +5,19 @@
 
 namespace leetcode::remove_duplicate_letters {
 
-class Solution {
-public:
-    static std::string remove_duplicate_letters(std::string s);
-};
+#define SOLUTION_CLASS_DECLARATION                                  \
+    class Solution {                                                \
+    public:                                                         \
+        static std::string remove_duplicate_letters(std::string s); \
+    }
+
+namespace select {
+SOLUTION_CLASS_DECLARATION;
+}
+
+namespace deque {
+SOLUTION_CLASS_DECLARATION;
+}
 
 }  // namespace leetcode::remove_duplicate_letters
 

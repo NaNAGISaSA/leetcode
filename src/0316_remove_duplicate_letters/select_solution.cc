@@ -3,7 +3,7 @@
 #include <algorithm>
 #include <unordered_map>
 
-namespace leetcode::remove_duplicate_letters {
+namespace leetcode::remove_duplicate_letters::select {
 
 std::string Solution::remove_duplicate_letters(std::string s) {
     auto get_count_map = [&s]() {
@@ -53,4 +53,4 @@ std::string Solution::remove_duplicate_letters(std::string s) {
     return result;
 }
 
-}  // namespace leetcode::remove_duplicate_letters
+}  // namespace leetcode::remove_duplicate_letters::select
