@@ -3,7 +3,7 @@
 #include <algorithm>
 #include <unordered_map>
 
-namespace leetcode::coin_change {
+namespace leetcode::coin_change::backtrace {
 
 namespace {
 void backtrace(const std::vector<int>& coins, std::unordered_map<int, int>& map, int amount, int change_num) {
@@ -30,4 +30,4 @@ int Solution::coin_change(std::vector<int>& coins, int amount) {
     return map.find(0) == map.end() ? -1 : map[0];
 }
 
-}  // namespace leetcode::coin_change
+}  // namespace leetcode::coin_change::backtrace

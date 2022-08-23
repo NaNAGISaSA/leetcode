@@ -5,10 +5,19 @@
 
 namespace leetcode::coin_change {
 
-class Solution {
-public:
-    static int coin_change(std::vector<int>& coins, int amount);
-};
+#define SOLUTION_CLASS_DECLARATION                                   \
+    class Solution {                                                 \
+    public:                                                          \
+        static int coin_change(std::vector<int>& coins, int amount); \
+    }
+
+namespace backtrace {
+SOLUTION_CLASS_DECLARATION;
+}
+
+namespace dp {
+SOLUTION_CLASS_DECLARATION;
+}
 
 }  // namespace leetcode::coin_change
 
