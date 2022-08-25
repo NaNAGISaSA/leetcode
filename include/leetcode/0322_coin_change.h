@@ -19,6 +19,8 @@ namespace dp {
 SOLUTION_CLASS_DECLARATION;
 }
 
+#undef SOLUTION_CLASS_DECLARATION
+
 }  // namespace leetcode::coin_change
 
 #endif
