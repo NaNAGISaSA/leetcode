@@ -19,6 +19,8 @@ namespace deque {
 SOLUTION_CLASS_DECLARATION;
 }
 
+#undef SOLUTION_CLASS_DECLARATION
+
 }  // namespace leetcode::remove_duplicate_letters
 
 #endif
