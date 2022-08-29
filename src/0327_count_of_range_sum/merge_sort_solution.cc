@@ -1,6 +1,6 @@
 #include "0327_count_of_range_sum.h"
 
-namespace leetcode::count_of_range_sum {
+namespace leetcode::count_of_range_sum::merge_sort {
 
 namespace {
 int merge(std::vector<long>& sum, size_t begin, size_t mid, size_t end, long lower, long upper) {
@@ -59,4 +59,4 @@ int Solution::count_range_sum(const std::vector<int>& nums, int lower, int upper
     return merge_sort(sum, 0, nums_size, lower, upper);
 }
 
-}  // namespace leetcode::count_of_range_sum
+}  // namespace leetcode::count_of_range_sum::merge_sort
