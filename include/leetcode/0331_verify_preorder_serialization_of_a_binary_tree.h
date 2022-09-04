@@ -5,10 +5,21 @@
 
 namespace leetcode::verify_preorder_serialization_of_a_binary_tree {
 
-class Solution {
-public:
-    static bool is_valid_serialization(const std::string& preorder);
-};
+#define SOLUTION_CLASS_DECLARATION                                       \
+    class Solution {                                                     \
+    public:                                                              \
+        static bool is_valid_serialization(const std::string& preorder); \
+    }
+
+namespace recurse {
+SOLUTION_CLASS_DECLARATION;
+}
+
+namespace count_node {
+SOLUTION_CLASS_DECLARATION;
+}
+
+#undef SOLUTION_CLASS_DECLARATION
 
 }  // namespace leetcode::verify_preorder_serialization_of_a_binary_tree
 

@@ -1,6 +1,6 @@
 #include "0331_verify_preorder_serialization_of_a_binary_tree.h"
 
-namespace leetcode::verify_preorder_serialization_of_a_binary_tree {
+namespace leetcode::verify_preorder_serialization_of_a_binary_tree::recurse {
 
 namespace {
 bool preorder_traverse(const std::string& preorder, size_t str_size, size_t& str_idx) {
@@ -31,4 +31,4 @@ bool Solution::is_valid_serialization(const std::string& preorder) {
     return preorder_traverse(preorder, str_size, str_idx) && str_idx == str_size;
 }
 
-}  // namespace leetcode::verify_preorder_serialization_of_a_binary_tree
+}  // namespace leetcode::verify_preorder_serialization_of_a_binary_tree::recurse
