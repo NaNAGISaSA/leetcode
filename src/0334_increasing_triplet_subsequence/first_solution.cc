@@ -1,6 +1,6 @@
 #include "0334_increasing_triplet_subsequence.h"
 
-namespace leetcode::increasing_triplet_subsequence {
+namespace leetcode::increasing_triplet_subsequence::first {
 
 bool Solution::increasing_triplet(const std::vector<int>& nums) {
     int idx1 = -1, idx2 = -1;
@@ -27,4 +27,4 @@ bool Solution::increasing_triplet(const std::vector<int>& nums) {
     return false;
 }
 
-}  // namespace leetcode::increasing_triplet_subsequence
+}  // namespace leetcode::increasing_triplet_subsequence::first

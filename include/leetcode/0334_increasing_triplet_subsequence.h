@@ -5,10 +5,21 @@
 
 namespace leetcode::increasing_triplet_subsequence {
 
-class Solution {
-public:
-    static bool increasing_triplet(const std::vector<int>& nums);
-};
+#define SOLUTION_CLASS_DECLARATION                                    \
+    class Solution {                                                  \
+    public:                                                           \
+        static bool increasing_triplet(const std::vector<int>& nums); \
+    }
+
+namespace first {
+SOLUTION_CLASS_DECLARATION;
+}
+
+namespace cleaner {
+SOLUTION_CLASS_DECLARATION;
+}
+
+#undef SOLUTION_CLASS_DECLARATION
 
 }  // namespace leetcode::increasing_triplet_subsequence
 
