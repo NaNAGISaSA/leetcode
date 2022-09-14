@@ -3,7 +3,7 @@
 #include <algorithm>
 #include <vector>
 
-namespace leetcode::house_robber_three {
+namespace leetcode::house_robber_three::first {
 
 namespace {
 std::vector<std::pair<int, bool>> postorder(TreeNode* root) {
@@ -30,4 +30,4 @@ int Solution::rob(TreeNode* root) {
     return res.size() == 1 ? res.front().first : std::max(res.front().first, res.back().first);
 }
 
-}  // namespace leetcode::house_robber_three
+}  // namespace leetcode::house_robber_three::first

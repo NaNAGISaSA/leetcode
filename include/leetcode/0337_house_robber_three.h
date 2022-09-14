@@ -5,10 +5,19 @@
 
 namespace leetcode::house_robber_three {
 
-class Solution {
-public:
-    static int rob(TreeNode* root);
-};
+#define SOLUTION_CLASS_DECLARATION      \
+    class Solution {                    \
+    public:                             \
+        static int rob(TreeNode* root); \
+    }
+
+namespace first {
+SOLUTION_CLASS_DECLARATION;
+}
+
+namespace cleaner {
+SOLUTION_CLASS_DECLARATION;
+}
 
 }  // namespace leetcode::house_robber_three
 
