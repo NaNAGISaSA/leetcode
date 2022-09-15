@@ -19,6 +19,8 @@ namespace cleaner {
 SOLUTION_CLASS_DECLARATION;
 }
 
+#undef SOLUTION_CLASS_DECLARATION
+
 }  // namespace leetcode::house_robber_three
 
 #endif

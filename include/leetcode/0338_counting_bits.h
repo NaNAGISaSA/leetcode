@@ -5,10 +5,21 @@
 
 namespace leetcode::counting_bits {
 
-class Solution {
-public:
-    static std::vector<int> count_bits(int n);
-};
+#define SOLUTION_CLASS_DECLARATION                 \
+    class Solution {                               \
+    public:                                        \
+        static std::vector<int> count_bits(int n); \
+    }
+
+namespace first {
+SOLUTION_CLASS_DECLARATION;
+}
+
+namespace cleaner {
+SOLUTION_CLASS_DECLARATION;
+}
+
+#undef SOLUTION_CLASS_DECLARATION
 
 }  // namespace leetcode::counting_bits
 

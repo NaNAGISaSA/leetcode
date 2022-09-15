@@ -1,6 +1,6 @@
 #include "0338_counting_bits.h"
 
-namespace leetcode::counting_bits {
+namespace leetcode::counting_bits::first {
 
 std::vector<int> Solution::count_bits(int n) {
     if (n == 0) {
@@ -25,4 +25,4 @@ std::vector<int> Solution::count_bits(int n) {
     return result;
 }
 
-}  // namespace leetcode::counting_bits
+}  // namespace leetcode::counting_bits::first
