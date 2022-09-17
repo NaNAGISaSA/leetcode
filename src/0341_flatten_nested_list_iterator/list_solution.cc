@@ -49,8 +49,7 @@ private:
     ListNode* curr_tail;
 };
 
-NestedIterator::NestedIterator(const std::vector<NestedInteger>& nested_list)
-    : impl(std::make_unique<Impl>(nested_list)) {
+NestedIterator::NestedIterator(std::vector<NestedInteger>& nested_list) : impl(std::make_unique<Impl>(nested_list)) {
 }
 
 NestedIterator::~NestedIterator() = default;

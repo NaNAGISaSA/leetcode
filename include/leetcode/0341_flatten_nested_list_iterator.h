@@ -23,7 +23,7 @@ private:
 namespace list {
 class NestedIterator {
 public:
-    NestedIterator(const std::vector<NestedInteger>& nested_list);
+    NestedIterator(std::vector<NestedInteger>& nested_list);
     ~NestedIterator();
 
     int next();
@@ -38,10 +38,15 @@ private:
 namespace stack {
 class NestedIterator {
 public:
-    NestedIterator(const std::vector<NestedInteger>& nested_list);
+    NestedIterator(std::vector<NestedInteger>& nested_list);
+    ~NestedIterator();
 
     int next();
     bool hasNext();
+
+private:
+    class Impl;
+    std::unique_ptr<Impl> impl;
 };
 }  // namespace stack
 
