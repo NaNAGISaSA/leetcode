@@ -2,7 +2,7 @@
 
 #include <vector>
 
-namespace leetcode::integer_break {
+namespace leetcode::integer_break::first {
 
 int Solution::integer_break(int n) {
     if (n < 4) {
@@ -25,4 +25,4 @@ int Solution::integer_break(int n) {
     return result;
 }
 
-}  // namespace leetcode::integer_break
+}  // namespace leetcode::integer_break::first
