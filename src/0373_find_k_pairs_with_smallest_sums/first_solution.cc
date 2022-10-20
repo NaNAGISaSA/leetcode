@@ -4,22 +4,9 @@
 #include <unordered_map>
 #include <unordered_set>
 
-namespace leetcode::find_k_pairs_with_smallest_sums {
+#include "utils.h"
 
-namespace {
-struct Node {
-    Node(size_t i1, size_t i2, int sum) : idx1(i1), idx2(i2), sum(sum) {
-    }
-
-    bool operator<(const Node& node) const {
-        return sum > node.sum;
-    }
-
-    size_t idx1;
-    size_t idx2;
-    int sum;
-};
-}  // namespace
+namespace leetcode::find_k_pairs_with_smallest_sums::first {
 
 std::vector<std::vector<int>> Solution::k_smallest_pairs(const std::vector<int>& nums1,
                                                          const std::vector<int>& nums2,
@@ -52,4 +39,4 @@ std::vector<std::vector<int>> Solution::k_smallest_pairs(const std::vector<int>&
     return result;
 }
 
-}  // namespace leetcode::find_k_pairs_with_smallest_sums
+}  // namespace leetcode::find_k_pairs_with_smallest_sums::first
