@@ -2,7 +2,7 @@
 
 #include <algorithm>
 
-namespace leetcode::wiggle_subsequence {
+namespace leetcode::wiggle_subsequence::dp {
 
 int Solution::wiggle_max_length(const std::vector<int>& nums) {
     size_t nums_size = nums.size();
@@ -21,4 +21,4 @@ int Solution::wiggle_max_length(const std::vector<int>& nums) {
     return result;
 }
 
-}  // namespace leetcode::wiggle_subsequence
+}  // namespace leetcode::wiggle_subsequence::dp
