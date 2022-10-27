@@ -5,10 +5,19 @@
 
 namespace leetcode::combination_sum_four {
 
-class Solution {
-public:
-    static int combination_sum(const std::vector<int>& nums, int target);
-};
+#define SOLUTION_CLASS_DECLARATION                                            \
+    class Solution {                                                          \
+    public:                                                                   \
+        static int combination_sum(const std::vector<int>& nums, int target); \
+    }
+
+namespace backtrace {
+SOLUTION_CLASS_DECLARATION;
+}
+
+namespace forward {
+SOLUTION_CLASS_DECLARATION;
+}
 
 }  // namespace leetcode::combination_sum_four
 

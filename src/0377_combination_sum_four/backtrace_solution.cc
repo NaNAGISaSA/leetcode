@@ -1,6 +1,6 @@
 #include "0377_combination_sum_four.h"
 
-namespace leetcode::combination_sum_four {
+namespace leetcode::combination_sum_four::backtrace {
 
 namespace {
 int backtrace(const std::vector<int>& nums, std::vector<int>& dp_vec, int target) {
@@ -24,4 +24,4 @@ int Solution::combination_sum(const std::vector<int>& nums, int target) {
     return backtrace(nums, dp_vec, target);
 }
 
-}  // namespace leetcode::combination_sum_four
+}  // namespace leetcode::combination_sum_four::backtrace
