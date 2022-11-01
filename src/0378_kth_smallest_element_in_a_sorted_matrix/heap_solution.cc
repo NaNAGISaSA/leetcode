@@ -2,7 +2,7 @@
 
 #include <queue>
 
-namespace leetcode::kth_smallest_element_in_a_sorted_matrix {
+namespace leetcode::kth_smallest_element_in_a_sorted_matrix::heap {
 
 int Solution::kth_smallest(const std::vector<std::vector<int>>& matrix, int k) {
     auto cmp = [&matrix](const std::pair<size_t, size_t>& p1, const std::pair<size_t, size_t>& p2) {
@@ -25,4 +25,4 @@ int Solution::kth_smallest(const std::vector<std::vector<int>>& matrix, int k) {
     return result;
 }
 
-}  // namespace leetcode::kth_smallest_element_in_a_sorted_matrix
+}  // namespace leetcode::kth_smallest_element_in_a_sorted_matrix::heap
