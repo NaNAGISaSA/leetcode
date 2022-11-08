@@ -16,7 +16,7 @@ Solution::Solution(ListNode* head) : head_(head) {
  * P(pick 4) = 1 / 4
  * P(pick 3) = 3 / 4 * (1 / 3) = 1 / 4
  * P(pick 2) = 3 / 4 * (2 / 3) * (1 / 2) = 1 / 4
- * P(pick 1) = 3 / 4 * (2 / 3) * (1 / 2) * 1 = 1 / 4
+ * P(pick 1) = 3 / 4 * (2 / 3) * (1 / 2) * (1 / 1) = 1 / 4
  */
 int Solution::get_random() {
     int result = 0, count = 1;
