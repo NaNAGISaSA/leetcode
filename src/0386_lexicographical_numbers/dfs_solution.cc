@@ -1,6 +1,6 @@
 #include "0386_lexicographical_numbers.h"
 
-namespace leetcode::lexicographical_numbers {
+namespace leetcode::lexicographical_numbers::dfs {
 
 namespace {
 void dfs(int num, int n, std::vector<int>& result) {
@@ -23,4 +23,4 @@ std::vector<int> Solution::lexical_order(int n) {
     return result;
 }
 
-}  // namespace leetcode::lexicographical_numbers
+}  // namespace leetcode::lexicographical_numbers::dfs
