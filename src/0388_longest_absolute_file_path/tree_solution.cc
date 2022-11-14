@@ -3,7 +3,7 @@
 #include <algorithm>
 #include <vector>
 
-namespace leetcode::longest_absolute_file_path {
+namespace leetcode::longest_absolute_file_path::tree {
 
 namespace {
 struct Node {
@@ -71,4 +71,4 @@ int Solution::length_longest_path(const std::string& input) {
     return static_cast<int>(result);
 }
 
-}  // namespace leetcode::longest_absolute_file_path
+}  // namespace leetcode::longest_absolute_file_path::tree

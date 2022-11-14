@@ -5,10 +5,21 @@
 
 namespace leetcode::longest_absolute_file_path {
 
-class Solution {
-public:
-    static int length_longest_path(const std::string& input);
-};
+#define SOLUTION_CLASS_DECLARATION                                \
+    class Solution {                                              \
+    public:                                                       \
+        static int length_longest_path(const std::string& input); \
+    }
+
+namespace tree {
+SOLUTION_CLASS_DECLARATION;
+}
+
+namespace stack {
+SOLUTION_CLASS_DECLARATION;
+}
+
+#undef SOLUTION_CLASS_DECLARATION
 
 }  // namespace leetcode::longest_absolute_file_path
 
