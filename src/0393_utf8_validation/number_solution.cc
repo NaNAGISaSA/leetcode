@@ -1,6 +1,6 @@
 #include "0393_utf8_validation.h"
 
-namespace leetcode::utf8_validation {
+namespace leetcode::utf8_validation::number {
 
 /*
  *    Number of Bytes   |        UTF-8 Octet Sequence
@@ -52,4 +52,4 @@ bool Solution::valid_utf8(const std::vector<int>& data) {
     return idx == data_size;
 }
 
-}  // namespace leetcode::utf8_validation
+}  // namespace leetcode::utf8_validation::number
