@@ -5,10 +5,19 @@
 
 namespace leetcode::decode_string {
 
-class Solution {
-public:
-    static std::string decode(const std::string& s);
-};
+#define SOLUTION_CLASS_DECLARATION                       \
+    class Solution {                                     \
+    public:                                              \
+        static std::string decode(const std::string& s); \
+    }
+
+namespace recurse {
+SOLUTION_CLASS_DECLARATION;
+}
+
+namespace stack {
+SOLUTION_CLASS_DECLARATION;
+}
 
 }  // namespace leetcode::decode_string
 

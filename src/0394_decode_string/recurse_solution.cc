@@ -2,7 +2,7 @@
 
 #include <utility>
 
-namespace leetcode::decode_string {
+namespace leetcode::decode_string::recurse {
 
 namespace {
 std::pair<std::string, size_t> expand(const std::string& s, size_t begin, int number) {
@@ -33,4 +33,4 @@ std::string Solution::decode(const std::string& s) {
     return std::move(expand(s, 0, 1).first);
 }
 
-}  // namespace leetcode::decode_string
+}  // namespace leetcode::decode_string::recurse
