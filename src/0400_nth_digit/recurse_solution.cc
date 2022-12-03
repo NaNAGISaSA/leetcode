@@ -1,6 +1,6 @@
 #include "0400_nth_digit.h"
 
-namespace leetcode::nth_digit {
+namespace leetcode::nth_digit::recurse {
 
 namespace {
 int recurse_find(long n, long begin, long len, long digit_num) {
@@ -29,4 +29,4 @@ int Solution::find_nth_digit(int n) {
     return recurse_find(n, 1, 1, 9);
 }
 
-}  // namespace leetcode::nth_digit
+}  // namespace leetcode::nth_digit::recurse
