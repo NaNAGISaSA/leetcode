@@ -1,6 +1,6 @@
 #include "0405_convert_a_number_to_hexadecimal.h"
 
-namespace leetcode::convert_a_number_to_hexadecimal {
+namespace leetcode::convert_a_number_to_hexadecimal::first {
 
 std::string Solution::to_hex(int num) {
     if (num == 0) {
@@ -40,4 +40,4 @@ std::string Solution::to_hex(int num) {
     return result;
 }
 
-}  // namespace leetcode::convert_a_number_to_hexadecimal
+}  // namespace leetcode::convert_a_number_to_hexadecimal::first

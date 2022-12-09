@@ -5,10 +5,19 @@
 
 namespace leetcode::convert_a_number_to_hexadecimal {
 
-class Solution {
-public:
-    static std::string to_hex(int num);
-};
+#define SOLUTION_CLASS_DECLARATION          \
+    class Solution {                        \
+    public:                                 \
+        static std::string to_hex(int num); \
+    }
+
+namespace first {
+SOLUTION_CLASS_DECLARATION;
+}
+
+namespace clean {
+SOLUTION_CLASS_DECLARATION;
+}
 
 }  // namespace leetcode::convert_a_number_to_hexadecimal
 
