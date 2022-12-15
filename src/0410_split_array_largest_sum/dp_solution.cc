@@ -2,7 +2,7 @@
 
 #include <limits>
 
-namespace leetcode::split_array_largest_sum {
+namespace leetcode::split_array_largest_sum::dp {
 
 int Solution::split_array(const std::vector<int>& nums, int k) {
     size_t nums_size = nums.size();
@@ -27,4 +27,4 @@ int Solution::split_array(const std::vector<int>& nums, int k) {
     return dp_mat[k - 1][nums_size - 1];
 }
 
-}  // namespace leetcode::split_array_largest_sum
+}  // namespace leetcode::split_array_largest_sum::dp
